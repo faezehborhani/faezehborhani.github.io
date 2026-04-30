@@ -13,9 +13,24 @@ More specifically, I am interested in how users perceive, learn, and interact wi
 
 Latest News
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
-
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+- Mar 2026 — 📝 1 paper accepted at IEEE Transactions on Visualization and Computer Graphics (TVCG). (https://ieeexplore.ieee.org/document/11457803)
+- Sep 2025 — 📝 1 paper accepted at International Conference on Human-Computer Interaction (Springer). (https://link.springer.com/chapter/10.1007/978-3-031-93061-4_13)
+- Mar 2025 — 📝 1 paper accepted at 2025 IEEE VR Workshop (VRW). (https://ieeexplore.ieee.org/abstract/document/10972780)
+- Nov 2024 — 🏆 Ranked 3rd in ACM Graduate Research Competition, 2024. [News](https://compsci.colostate.edu/graduate-students/) · [Award](https://drive.google.com/file/d/1V8dl7_RWi4o6IviwxIdgFO4mcx6MTF3g)
+- Nov 2024 — 📝 1 paper accepted at PosiTech Workshop (CSCW). (https://arxiv.org/abs/2411.06293)
+- Oct 2024 — 📝 1 paper accepted at ISMAR-Adjunct 2024. (https://ieeexplore.ieee.org/abstract/document/10765306)
+- Sep 2024 — 📝 1 paper accepted at International Conference on Human-Computer Interaction (Springer). (https://link.springer.com/chapter/10.1007/978-3-031-61044-8_15)
+- Mar 2024 — 📝 1 paper accepted at IEEE VR Workshop (VRW) 2024. (https://ieeexplore.ieee.org/abstract/document/10536373)
+- Jan 2024 — 📝 1 paper accepted at IEEE TVCG (survey of Annotation in XR). (https://ieeexplore.ieee.org/abstract/document/10160139)
+- Oct 2023 — 📝 1 paper accepted at ISMAR-Adjunct 2023. (https://ieeexplore.ieee.org/abstract/document/10322181)
+- Oct 2022 - 🏢 Extended Ricoh USA  Intenship for another semster  
+- May 2022 — 🏢 Joined Ricoh USA as an AR/VR Developer Intern 
+- Mar 2022 — 📝 1 paper accepted at IEEE VR Workshop (VRW) 2022. (https://ieeexplore.ieee.org/abstract/document/9757653)
+- May 2020 — 🏅 CS Excellence in Diversity Award, CSU. (https://drive.google.com/file/d/1s1-JKsg8aULmNwxHdVV-927j7lNl8H2O/view?usp=sharing)
+- Oct 2019 — 🥇 Ranked 1st in CSU XR Hackathon competition, Fort Collins 2019. (https://collegian.com/articles/news/2019/10/category-news-vr-meets-science-hackathon-births-vr-innovation/)
+- 2020 — 📝 Master's thesis published: Using Gender Swap in Virtual Reality for Increasing Empathy Against Stereotype Threats. (https://www.proquest.com/openview/c8eaf2dfeef269cae04c3ba5de35714d/1?pq-origsite=gscholar&cbl=18750&diss=y)
+- May 2020 - 🥳 —  successfuly defended a CS master
+// ...existing code...
 
 Community Service 
 ======
@@ -44,11 +59,7 @@ Community Service
 - 📝 Reviewer at CHI LBW 2021 (1)
 - 🥽 Organizing committee of [DISCE at IEEE VR 2021](https://sites.google.com/view/disce)
 - 🤝 Organizing Committee of Graduate poster session, CS CSU, Spring 2019
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+
 
 Site-wide configuration
 ------
