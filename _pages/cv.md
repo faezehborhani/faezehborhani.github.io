@@ -53,19 +53,19 @@ In progress/Under Review Projects ⏳
 - **Borhani, Z.; Ebrahimpour Boroojeny, A.; Ortega, F.R.** — "Privacy Leakage in Collaborative AR Annotation Systems" *(Under submission, 2025)*  
   _Summary:_ Examines privacy risks in collaborative XR: how text and sketch annotations can leak author identity. Introduces authorship-attribution attacks (text embeddings, time-series for sketches) and evaluates lightweight defenses (paraphrasing/summarization via LLMs for text; sketch beautification). Shows reduced attribution while preserving annotation utility.
 
-- **Gaddy, V.; Borhani, Z.; Ortega, F.R.** — "Implementing Novice–Expert Pair Coaching in Intermediate CS Recitations" *(under submission)*  
+- **Gaddy, V.; Borhani, Z.; Ortega, F.R.** — " Novice–Expert Pair Coaching in Intermediate CS Recitations" *(under submission)*  
   _Summary:_ Evaluates a novice–expert pair coaching (NEPC) intervention across two semester-long studies. Reports positive effects on programming and engineering skill development and student well‑being, with nuanced outcomes across assessment types.
 
 - **Borhani, Z.; Coler, A.; Blanchard, N.; Mastorakis, S.; Shannigrahi, S.; Szafir, D.; Khadka, V.; Ortega, F.R.** — "Workshop on Distributed Interactive Systems for Collaboration Experiences (DISCE): Surveys" *(under submission)*  
   _Summary:_ Three surveys from the DISCE workshop summarizing challenges and requirements for collaborative AR/VR systems (networking, tooling, interaction models), and recommendations for hybrid systems and ML-enabled support.
 
-- **Raikawr, A.; Borhani, Z.; Plubst, L.; Barreta, M.; Batmaz, A.; Ortega, F.R.** — "Beyond the Beep: Comparing Visual‑Only and Multimodal Notification Design for Improved Noticeability in Augmented Reality" *(under review)*  
+- **Raikawr, A.; Borhani, Z.; Plubst, L.; Barreta, M.; Batmaz, A.; Ortega, F.R.** — "Comparing Visual‑Only and Multimodal Notification Design in Augmented Reality" *(under review)*  
   _Summary:_ Compares visual‑only vs. multimodal AR notifications. Finds no consistent performance advantage for multimodal designs and discusses implications for notification design.
 
-- **Li, J.; Borhani, Z.; Ortega, F.R.** — "Multi‑day Gesture Elicitation Study for Physical Simulation Learning Environments in AR/VR" *(under review)*  
+- **Li, J.; Borhani, Z.; Ortega, F.R.** — "Gesture Elicitation Comparision in AR" *(under review)*  
   _Summary:_ Multi‑day study examining gesture transfer between VR and AR across 33 referents in a wind simulation. Finds strong cross‑platform consistency except for translation gestures tied to physical surfaces.
 
-- **Bukman, M.; Borhani, Z.; Li, J.; Ortega, F.R.** — "Invisible Winds: A Study of Fluid Dynamics" *(under review)*  
+- **Bukman, M.; Borhani, Z.; Li, J.; Ortega, F.R.** — "Invisible Winds: A Study of Fluid Dynamics in VR" *(under review)*  
   _Summary:_ Between‑subjects study (N=31) comparing slide‑based instruction vs. slides+VR for fluid dynamics. Results suggest VR did not improve conceptual learning and discuss design implications for educational VR.
   
 
