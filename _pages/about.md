@@ -1,23 +1,49 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am a PhD candidate in Computer Science at Colorado State University, where I work in the [Natural User Interaction Lab](https://nuilab.org/) under the supervision of  [Francisco R. Ortega](https://scholar.google.com/citations?user=AuBa0OAAAAAJ&hl=en). My research lies at the intersection of Human-Computer Interaction (HCI) and Extended Reality (XR), with a focus on interaction modalities in Augmented and Virtual Reality systems.
 
-A data-driven personal website
+More specifically, I am interested in how users perceive, learn, and interact with XR systems over time, including topics such as gesture memorability, annotation retrieval, XR privacy, cross-platform interaction consistency (AR vs. VR), and the effectiveness of multimodal feedback. I also explore applications of XR in domains such as education (e.g., wind and physics simulations in VR), accessibility, and empathic computing.
+
+Latest News
 ======
 Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
 Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-Getting started
+Community Service 
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
+- 📝 Reviewer at TVCG journal 2026 (1)
+- 🥽 Registration Co-Chair at SUI 2026
+- 📝 Reviewer at CHI 2026 (5)
+- 📝 Reviewer at TVCG journal 2025 (3)
+- 🥽 Registration Co-Chair at [SUI 2025](https://sui.acm.org/2025/committee-members/)
+- 🥽 Registration Co-Chair at [VRST 2025](https://vrst.acm.org/vrst2025/index.php/committee/)
+- 🥽 Organizing committee of [ENPTXR Workshop at IEEE VR 2025](https://www.xrprototyping.com/)
+- 📝 Reviewer at ISMAR 2025 (3)
+- 📝 Reviewer at CHI 2025 (3)
+- 🥽 Organizing committee of [ENPTXR Workshop at IEEE VR 2024](https://www.xrprototyping.com/)
+- 📝 Reviewer at GI 2024 (2)
+- 📝 Reviewer at ISMAR 2024 (2)
+- 📝 Reviewer at IEEE VR 2024 (1)
+- 🥽 Organizing committee of [ENPTXR at IEEE VR 2023](https://www.xrprototyping.com/)
+- 📝 Reviewer at SUI 2023 (2)
+- 📝 Reviewer at ISMAR 2023 (1)
+- 📝 Reviewer at Frontiers 2022 (2)
+- 📝 Reviewer at ISMAR 2022 (1)
+- 📝 Reviewer at ISS 2022 (1)
+- 🥽 Organizing committee of [ACM SUI 2021](https://sui.acm.org/2021-testing/)
+- 📝 Reviewer at ISMAR 2021 (2)
+- 📝 Reviewer at IEEE VR 2021 (1)
+- 📝 Reviewer at CHI LBW 2021 (1)
+- 🥽 Organizing committee of [DISCE at IEEE VR 2021](https://sites.google.com/view/disce)
+- 🤝 Organizing Committee of Graduate poster session, CS CSU, Spring 2019
 1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
 1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
 1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
