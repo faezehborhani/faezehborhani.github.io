@@ -21,24 +21,32 @@ Education 🎓
 
 - **M.S., Computer Engineering** — Sharif University of Technology, Tehran, Iran (June 2016)
 
-Skills
+Skills 🛠️
 ======
-- Languages: C#, Python, R, Blueprints, SQL, C++, C
-- Tools & frameworks: Unity, Unreal, MRTK, OpenXR, Figma, Blender, Maya, Vuforia, SteamVR
-- Devices: HoloLens 2, HTC Vive, Oculus Quest/Rift, Vive Trackers, Leap Motion, Kinect
+- **Programming languages:** C#, Python, R, C++, C, SQL, Blueprints
+- **Tools & frameworks:** Unity · Unreal Engine · MRTK · OpenXR · Figma · Blender · Maya · Vuforia · SteamVR
+- **Devices & platforms:** HoloLens 2 · HTC Vive · Oculus Quest / Rift · Vive Trackers · Leap Motion · Kinect
+- **Other:** Version control (Git), CI/CD basics, basic shader & 3D asset pipelines
 
-Experience
+
+Experience 💼
 ======
-- Colorado State University — Graduate Research Assistant (HCI Research)  
+- **Colorado State University — Graduate Research Assistant (HCI Research)**  
   Jan 2019 – May 2026  
-  Natural User Interaction Lab (Advisor: Prof. Francisco R. Ortega). Developed AR/VR systems, designed and ran human-subject studies (N = 20–80+), analyzed quantitative/qualitative data, mentored students, contributed to grants and publications.
+  Natural User Interaction Lab — Advisor: [Prof. Francisco R. Ortega](https://scholar.google.com/citations?user=AuBa0OAAAAAJ&hl=en)  
+  - Developed immersive AR/VR systems (Unity, MRTK, Vuforia) and experimental stimuli.  
+  - Designed and ran human-subject studies (N = 20–80+); performed quantitative and qualitative analyses.  
+  - Led end-to-end research cycles (problem → implementation → evaluation → publications); mentored students and contributed to grant proposals.
 
-- Ricoh USA — Augmented Reality Developer Intern  
+- **Ricoh USA — Augmented Reality Developer Intern**  
   May 2022 – Dec 2022  
-  Developed proof-of-concept mobile AR interfaces (Unity + Vuforia), evaluated UX, researched AR for insurance workflows.
+  - Implemented proof-of-concept mobile AR interfaces (Unity + Vuforia) and integrated barcode scanning.  
+  - Conducted UX testing and iterated on interaction flows to improve workplace efficiency.
 
-- Sharif University of Technology — Research Assistant  
-  Jun 2012 – Jun 2015
+- **Sharif University of Technology — Research Assistant**  
+  Jun 2012 – Jun 2015  
+  - Worked on embedded systems research; implemented firmware/software for multi-core platforms and supported experiments.
+
 
 In progress / Under review
 ======
