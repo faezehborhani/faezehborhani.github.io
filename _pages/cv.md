@@ -9,15 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-// ...existing code...
-Education
+
+Education 🎓
 ======
-- Ph.D., Computer Science, Colorado State University (Fall 2020 – Fall 2026)
-  - Advisor: Francisco R. Ortega
-  - Research area: Interaction modalities in Extended Reality
-- M.S., Computer Science, Colorado State University (May 2020)
-  - Thesis: Using Gender Swap in VR for Increasing Empathy Against Stereotype Threats
-- M.Eng., Computer Engineering, Sharif University of Technology (June 2016)
+- **Ph.D., Computer Science** — Colorado State University, Fort Collins, CO (Fall 2020 – Fall 2026, expected)  
+  - Advisor: [Francisco R. Ortega](https://scholar.google.com/citations?user=AuBa0OAAAAAJ&hl=en)  
+  - Research: Interaction modalities in Extended Reality
+
+- **M.S., Computer Science** — Colorado State University, Fort Collins, CO (May 2020)  
+  - Thesis: *Using Gender Swap in VR for Increasing Empathy Against Stereotype Threats*
+
+- **M.S., Computer Engineering** — Sharif University of Technology, Tehran, Iran (June 2016)
 
 Skills
 ======
