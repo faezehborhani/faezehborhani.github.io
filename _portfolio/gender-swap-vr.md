@@ -5,7 +5,7 @@ order: 5
 venue: "IEEE ISMAR Adjunct 2023 (Poster); M.S. thesis, Colorado State University, 2020"
 excerpt: "A virtual reality system for gender swapping to increase empathy against stereotype threats in computer science job interviews."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page
-# video: <YouTube / Vimeo / Google Drive link, or /files/projects/<file>.mp4>
+# video: <YouTube / Vimeo / Google Drive link, or /files/videos/<file>.mp4>
 # images:
 #   - /images/projects/<file>.jpg
 ---
