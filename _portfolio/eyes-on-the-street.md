@@ -5,7 +5,7 @@ order: 2
 venue: "32nd ACM Symposium on Virtual Reality Software and Technology (VRST 2026), to appear"
 excerpt: "An outdoor study of pedestrian navigation support using augmented reality glasses."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page
-# video: <YouTube / Vimeo / Google Drive link, or /files/videos/<file>.mp4>
+video: /files/videos/eyes-on-the-street.mp4
 # images:
 #   - /images/projects/<file>.jpg
 ---
