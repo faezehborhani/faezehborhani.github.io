@@ -1,14 +1,30 @@
 ---
 layout: archive
-title: "Portfolio"
-permalink: /portfolio/
+title: "Projects"
+permalink: /projects/
 author_profile: true
+redirect_from:
+  - /portfolio/
 ---
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% assign projects = site.portfolio | sort: "order" %}
+{% for post in projects %}
+<div class="list__item">
+  <article class="archive__item project-card">
+    {% if post.teaser %}
+      <a href="{{ base_path }}{{ post.url }}" class="project-card__thumb">
+        <img src="{{ base_path }}{{ post.teaser }}" alt="{{ post.title }}">
+      </a>
+    {% endif %}
+    <h2 class="archive__item-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h2>
+    {% if post.venue %}<p><i>{{ post.venue }}</i></p>{% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt">{{ post.excerpt | markdownify | strip_html }}</p>{% endif %}
+  </article>
+</div>
 {% endfor %}
 
+<style>
+.project-card__thumb img { width: 100%; max-width: 480px; height: auto; border-radius: 6px; margin-bottom: .5rem; }
+</style>
