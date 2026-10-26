@@ -1,14 +1,11 @@
 ---
-title: "Instruction Methods for DailyBuddy: A Mobile App for Improving Daily Living Skills for Adults with Autism"
+title: "Comparing Instruction Methods for DailyBuddy: A Mobile App for Improving Daily Living Skills for Adults with Autism"
 collection: talks
-type: "Conference Talk"
+type: "Conference Paper"
 permalink: /talks/2025-06-25-dailybuddy-instruction-methods
-venue: "International Conference on Human-Computer Interaction (HCII 2025)"
+venue: "27th International Conference on Human-Computer Interaction (HCII 2025)"
 date: 2025-06-25
-location: "Gothenburg, Sweden (Remote)"
-image: /assets/images/talks/2025-06-25-dailybuddy-header.jpg
-thumbnail: /assets/images/talks/thumbs/2025-06-25-dailybuddy-thumb.jpg
-tags: [HCI, accessibility, mobile, DailyBuddy]
+location: "Gothenburg, Sweden (remote)"
 ---
 
 <!-- single-image carousel: shows one image at a time with arrows -->
@@ -32,23 +29,23 @@ tags: [HCI, accessibility, mobile, DailyBuddy]
 <div class="talk-carousel" aria-label="Talk image gallery" tabindex="0">
   <div class="talk-slides">
     <div class="talk-slide">
-      <a href="{{ site.baseurl }}../images/2025-06-25-dailybuddy-header.jpg" target="_blank" rel="noopener">
-        <img src="{{ site.baseurl }}../images/2025-06-25-dailybuddy-header.jpg" alt="DailyBuddy — app overview">
+      <a href="{{ site.baseurl }}/images/2025-06-25-dailybuddy-header.jpg" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}/images/2025-06-25-dailybuddy-header.jpg" alt="DailyBuddy — app overview">
       </a>
     </div>
     <div class="talk-slide">
-      <a href="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide1.jpg" target="_blank" rel="noopener">
-        <img src="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide1.jpg" alt="DailyBuddy — slide 1">
+      <a href="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide1.jpg" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide1.jpg" alt="DailyBuddy — slide 1">
       </a>
     </div>
     <div class="talk-slide">
-      <a href="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide2.jpg" target="_blank" rel="noopener">
-        <img src="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide2.jpg" alt="DailyBuddy — slide 2">
+      <a href="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide2.jpg" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide2.jpg" alt="DailyBuddy — slide 2">
       </a>
     </div>
     <div class="talk-slide">
-      <a href="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide3.jpg" target="_blank" rel="noopener">
-        <img src="{{ site.baseurl }}../images/2025-06-25-dailybuddy-slide3.jpg" alt="DailyBuddy — slide 3">
+      <a href="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide3.jpg" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}/images/2025-06-25-dailybuddy-slide3.jpg" alt="DailyBuddy — slide 3">
       </a>
     </div>
   </div>
@@ -87,4 +84,4 @@ tags: [HCI, accessibility, mobile, DailyBuddy]
 })();
 </script>
 
-This talk presents the design and evaluation of instruction methods for DailyBuddy, a mobile app to support adults with autism in developing daily living skills. We compare guidance strategies (step-by-step, contextual prompts, and multimedia cues), report usability and learning outcomes, and distill practical design recommendations for accessible mobile instruction.
+[Read the paper](https://link.springer.com/chapter/10.1007/978-3-031-93061-4_13)
