@@ -10,23 +10,86 @@ redirect_from:
 {% include base_path %}
 
 {% assign projects = site.portfolio | sort: "order" %}
+<div class="project-grid">
 {% for post in projects %}
-<div class="list__item">
-  <article class="archive__item project-card">
-    <h2 class="archive__item-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h2>
+  <article class="project-card">
     {% if post.video %}
-      {% include project-media.html project=post hide_images=true %}
+      <div class="project-card__media">
+        {% include project-media.html project=post hide_images=true %}
+        <button type="button" class="project-card__expand" aria-label="Enlarge video: {{ post.title }}" title="Enlarge video">&#x2922;</button>
+      </div>
     {% elsif post.teaser %}
-      <img class="project-card__thumb" src="{{ base_path }}{{ post.teaser }}" alt="{{ post.title }}">
+      <a href="{{ base_path }}{{ post.url }}"><img class="project-card__thumb" src="{{ base_path }}{{ post.teaser }}" alt="{{ post.title }}"></a>
     {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt">{{ post.excerpt | markdownify | strip_html }}</p>{% endif %}
+    <h3 class="project-card__title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h3>
+    {% if post.excerpt %}<p class="project-card__text">{{ post.excerpt | markdownify | strip_html }}</p>{% endif %}
     {% if post.venue %}<p class="project-card__venue"><i>{{ post.venue }}</i></p>{% endif %}
   </article>
-</div>
 {% endfor %}
+</div>
+
+<dialog id="project-lightbox" aria-label="Enlarged video">
+  <button type="button" class="project-lightbox__close" aria-label="Close">&times;</button>
+  <div class="project-lightbox__body"></div>
+</dialog>
 
 <style>
-.project-card { margin-bottom: 2.5rem; }
-.project-card__thumb { width: 100%; height: auto; border-radius: 6px; margin-bottom: .5rem; }
-.project-card__venue { font-size: .85em; color: #777; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1.5rem; margin-top: 1rem; }
+@media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } }
+.project-card { display: flex; flex-direction: column; }
+.project-card__media { position: relative; }
+.project-card__media .project-video, .project-card__media .project-video-file { margin-bottom: 0; }
+.project-card__thumb { width: 100%; height: auto; border-radius: 6px; }
+.project-card__expand {
+  position: absolute; top: 8px; right: 8px; z-index: 2;
+  width: 34px; height: 34px; border: 0; border-radius: 50%;
+  background: rgba(0,0,0,.6); color: #fff; font-size: 18px; line-height: 34px; cursor: pointer;
+}
+.project-card__expand:hover, .project-card__expand:focus { background: rgba(0,0,0,.85); }
+.project-card__title { font-size: 1.05em; margin: .6rem 0 .3rem; }
+.project-card__text { font-size: .85em; margin: 0 0 .3rem; }
+.project-card__venue { font-size: .75em; color: #777; margin: 0; }
+
+#project-lightbox { width: min(1100px, 94vw); max-width: none; padding: 0; border: 0; border-radius: 8px; background: #000; overflow: visible; }
+#project-lightbox::backdrop { background: rgba(0,0,0,.8); }
+.project-lightbox__body video { display: block; width: 100%; max-height: 85vh; border-radius: 8px; }
+.project-lightbox__body .project-video { margin: 0; }
+.project-lightbox__close {
+  position: absolute; top: -40px; right: 0; border: 0; background: none;
+  color: #fff; font-size: 32px; line-height: 1; cursor: pointer;
+}
 </style>
+
+<script>
+(function () {
+  var dlg = document.getElementById('project-lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var body = dlg.querySelector('.project-lightbox__body');
+
+  document.querySelectorAll('.project-card__expand').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var media = btn.parentElement;
+      var small = media.querySelector('video');
+      var frame = media.querySelector('.project-video');
+      body.innerHTML = '';
+      if (small) {
+        small.pause();
+        var big = document.createElement('video');
+        big.src = small.currentSrc || small.src;
+        big.controls = true;
+        big.autoplay = true;
+        big.currentTime = small.currentTime;
+        body.appendChild(big);
+      } else if (frame) {
+        body.appendChild(frame.cloneNode(true));
+      }
+      dlg.showModal();
+    });
+  });
+
+  function close() { body.innerHTML = ''; if (dlg.open) dlg.close(); }
+  dlg.querySelector('.project-lightbox__close').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+  dlg.addEventListener('close', function () { body.innerHTML = ''; });
+})();
+</script>
