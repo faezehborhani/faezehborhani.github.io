@@ -32,7 +32,7 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=0BwenF4AAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0003-4242-551X"
   semantic         : # URL
@@ -84,8 +84,8 @@ publication_category:
     title: 'Workshop Papers, Posters, and Doctoral Consortium'
   thesis:
     title: 'Thesis'
-  manuscripts:
-    title: 'Manuscripts Under Review and Work in Progress'
+  preprints:
+    title: 'arXiv Preprints'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
