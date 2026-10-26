@@ -13,18 +13,20 @@ redirect_from:
 {% for post in projects %}
 <div class="list__item">
   <article class="archive__item project-card">
-    {% if post.teaser %}
-      <a href="{{ base_path }}{{ post.url }}" class="project-card__thumb">
-        <img src="{{ base_path }}{{ post.teaser }}" alt="{{ post.title }}">
-      </a>
-    {% endif %}
     <h2 class="archive__item-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h2>
-    {% if post.venue %}<p><i>{{ post.venue }}</i></p>{% endif %}
+    {% if post.video %}
+      {% include project-media.html project=post hide_images=true %}
+    {% elsif post.teaser %}
+      <img class="project-card__thumb" src="{{ base_path }}{{ post.teaser }}" alt="{{ post.title }}">
+    {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt">{{ post.excerpt | markdownify | strip_html }}</p>{% endif %}
+    {% if post.venue %}<p class="project-card__venue"><i>{{ post.venue }}</i></p>{% endif %}
   </article>
 </div>
 {% endfor %}
 
 <style>
-.project-card__thumb img { width: 100%; max-width: 480px; height: auto; border-radius: 6px; margin-bottom: .5rem; }
+.project-card { margin-bottom: 2.5rem; }
+.project-card__thumb { width: 100%; height: auto; border-radius: 6px; margin-bottom: .5rem; }
+.project-card__venue { font-size: .85em; color: #777; }
 </style>

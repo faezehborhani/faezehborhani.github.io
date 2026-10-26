@@ -2,10 +2,13 @@
   Renders a project's media from its front matter:
     video:  YouTube/Vimeo/Google Drive URL, or a site path to an .mp4 (e.g. /files/videos/demo.mp4)
     images: list of site paths (e.g. /images/projects/foo-1.jpg)
+  Pass project=post to render another document's media (e.g. on the Projects list page).
 {% endcomment %}
 {% include base_path %}
-{% if page.video %}
-  {% assign v = page.video %}
+{% assign p = include.project | default: page %}
+{% assign embed = nil %}
+{% if p.video %}
+  {% assign v = p.video %}
   {% if v contains "youtube.com/watch?v=" %}
     {% assign vid = v | split: "v=" | last | split: "&" | first %}
     {% capture embed %}https://www.youtube.com/embed/{{ vid }}{% endcapture %}
@@ -20,15 +23,15 @@
     {% capture embed %}https://drive.google.com/file/d/{{ vid }}/preview{% endcapture %}
   {% endif %}
   {% if embed %}
-    <div class="project-video"><iframe src="{{ embed }}" title="{{ page.title }} video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="project-video"><iframe loading="lazy" src="{{ embed }}" title="{{ p.title }} video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
   {% else %}
     <video class="project-video-file" controls preload="metadata" src="{{ base_path }}{{ v }}"></video>
   {% endif %}
 {% endif %}
-{% if page.images %}
+{% if p.images and include.hide_images != true %}
   <div class="project-images">
-    {% for img in page.images %}
-      <a href="{{ base_path }}{{ img }}" target="_blank" rel="noopener"><img src="{{ base_path }}{{ img }}" alt="{{ page.title }} image {{ forloop.index }}" loading="lazy"></a>
+    {% for img in p.images %}
+      <a href="{{ base_path }}{{ img }}" target="_blank" rel="noopener"><img src="{{ base_path }}{{ img }}" alt="{{ p.title }} image {{ forloop.index }}" loading="lazy"></a>
     {% endfor %}
   </div>
 {% endif %}
