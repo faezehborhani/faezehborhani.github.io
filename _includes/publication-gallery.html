@@ -2,22 +2,37 @@
   Small image gallery for a publication. Images are picked up automatically from
     images/publications/<publication file name without .md>/
   e.g. _publications/2026-11-02-eyes-on-the-street.md -> images/publications/2026-11-02-eyes-on-the-street/
-  Files are shown in alphabetical order; clicking one opens it full size.
+  Files are shown in order of their leading number (1-foo.png, 2-bar.jpg, ... 10-baz.png),
+  then any unnumbered files alphabetically; clicking one opens it full size.
   Pass pub=post on list pages; defaults to page.
 {% endcomment %}
 {% include base_path %}
 {% assign pub = include.pub | default: page %}
 {% assign gallery_slug = pub.path | split: "/" | last | split: "." | first %}
 {% capture gallery_dir %}/images/publications/{{ gallery_slug }}/{% endcapture %}
-{% assign gallery_files = site.static_files | sort: "path" %}
+{% comment %} Sort key: leading number zero-padded (so 2- comes before 10-), unnumbered files last. {% endcomment %}
+{%- capture gallery_keys -%}
+  {%- for f in site.static_files -%}
+    {%- unless f.path contains gallery_dir -%}{%- continue -%}{%- endunless -%}
+    {%- assign ext = f.extname | downcase -%}
+    {%- case ext -%}
+      {%- when ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" -%}
+        {%- assign num = f.basename | split: "-" | first -%}
+        {%- assign n = num | plus: 0 -%}
+        {%- assign n_str = n | append: "" -%}
+        {%- if n_str == num -%}{%- assign key = n | plus: 100000 -%}{%- else -%}{%- assign key = 999999 -%}{%- endif -%}
+        {{- key }}|{{ f.path }}::
+    {%- endcase -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% assign gallery_keys = gallery_keys | split: "::" | sort %}
 {% capture gallery_items %}
-  {% for f in gallery_files %}
-    {% unless f.path contains gallery_dir %}{% continue %}{% endunless %}
-    {% assign ext = f.extname | downcase %}
-    {% case ext %}
-      {% when ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" %}
-        <a class="pub-gallery__item" href="{{ base_path }}{{ f.path }}"><img src="{{ base_path }}{{ f.path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ f.basename | escape }}" loading="lazy"></a>
-    {% endcase %}
+  {% for k in gallery_keys %}
+    {% assign k = k | strip %}
+    {% if k == "" %}{% continue %}{% endif %}
+    {% assign img_path = k | split: "|" | last %}
+    {% assign img_name = img_path | split: "/" | last | split: "." | first %}
+    <a class="pub-gallery__item" href="{{ base_path }}{{ img_path }}"><img src="{{ base_path }}{{ img_path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ img_name | escape }}" loading="lazy"></a>
   {% endfor %}
 {% endcapture %}
 {% assign gallery_items = gallery_items | strip %}
