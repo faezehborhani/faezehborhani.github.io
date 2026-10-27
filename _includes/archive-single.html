@@ -68,5 +68,9 @@
       <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% endif %}
 
+    {% if post.collection == 'publications' %}
+      {% include publication-gallery.html pub=post %}
+    {% endif %}
+
   </article>
 </div>

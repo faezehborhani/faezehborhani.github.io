@@ -1,0 +1,87 @@
+{% comment %}
+  Small image gallery for a publication. Images are picked up automatically from
+    images/publications/<publication file name without .md>/
+  e.g. _publications/2026-11-02-eyes-on-the-street.md -> images/publications/2026-11-02-eyes-on-the-street/
+  Files are shown in alphabetical order; clicking one opens it full size.
+  Pass pub=post on list pages; defaults to page.
+{% endcomment %}
+{% include base_path %}
+{% assign pub = include.pub | default: page %}
+{% assign gallery_slug = pub.path | split: "/" | last | split: "." | first %}
+{% capture gallery_dir %}/images/publications/{{ gallery_slug }}/{% endcapture %}
+{% assign gallery_files = site.static_files | sort: "relative_path" %}
+{% capture gallery_items %}
+  {% for f in gallery_files %}
+    {% unless f.relative_path contains gallery_dir %}{% continue %}{% endunless %}
+    {% assign ext = f.extname | downcase %}
+    {% case ext %}
+      {% when ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" %}
+        <a class="pub-gallery__item" href="{{ base_path }}{{ f.relative_path }}"><img src="{{ base_path }}{{ f.relative_path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ f.basename | escape }}" loading="lazy"></a>
+    {% endcase %}
+  {% endfor %}
+{% endcapture %}
+{% assign gallery_items = gallery_items | strip %}
+{% if gallery_items != "" %}
+  <div class="pub-gallery">{{ gallery_items }}</div>
+  {% unless pub_gallery_assets_done %}
+    {% assign pub_gallery_assets_done = true %}
+<style>
+.pub-gallery { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 1rem; }
+.pub-gallery__item { display: block; width: 110px; height: 80px; border-radius: 6px; overflow: hidden; background: #f2f3f3; }
+.pub-gallery__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s; }
+.pub-gallery__item:hover img, .pub-gallery__item:focus img { transform: scale(1.05); }
+.pub-lightbox { padding: 0; border: 0; background: transparent; max-width: 92vw; max-height: 92vh; overflow: visible; }
+.pub-lightbox::backdrop { background: rgba(0, 0, 0, .85); }
+.pub-lightbox img { display: block; max-width: 92vw; max-height: 88vh; border-radius: 6px; background: #fff; }
+.pub-lightbox button { position: fixed; background: none; border: 0; color: #fff; font-size: 40px; line-height: 1; cursor: pointer; padding: 8px 14px; }
+.pub-lightbox__close { top: 10px; right: 10px; }
+.pub-lightbox__prev { left: 6px; top: 50%; transform: translateY(-50%); }
+.pub-lightbox__next { right: 6px; top: 50%; transform: translateY(-50%); }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var dlg = document.createElement('dialog');
+  if (typeof dlg.showModal !== 'function') return;
+  dlg.className = 'pub-lightbox';
+  dlg.setAttribute('aria-label', 'Enlarged image');
+  dlg.innerHTML = '<img alt=""><button type="button" class="pub-lightbox__prev" aria-label="Previous image">&#8249;</button>' +
+    '<button type="button" class="pub-lightbox__next" aria-label="Next image">&#8250;</button>' +
+    '<button type="button" class="pub-lightbox__close" aria-label="Close">&times;</button>';
+  document.body.appendChild(dlg);
+  var img = dlg.querySelector('img');
+  var items = [], idx = 0;
+
+  function show(i) {
+    idx = (i + items.length) % items.length;
+    img.src = items[idx].href;
+    img.alt = items[idx].querySelector('img').alt;
+    var multi = items.length > 1;
+    dlg.querySelector('.pub-lightbox__prev').hidden = !multi;
+    dlg.querySelector('.pub-lightbox__next').hidden = !multi;
+  }
+
+  document.querySelectorAll('.pub-gallery').forEach(function (gallery) {
+    var links = Array.prototype.slice.call(gallery.querySelectorAll('.pub-gallery__item'));
+    links.forEach(function (a, i) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        items = links;
+        show(i);
+        dlg.showModal();
+      });
+    });
+  });
+
+  dlg.querySelector('.pub-lightbox__prev').addEventListener('click', function () { show(idx - 1); });
+  dlg.querySelector('.pub-lightbox__next').addEventListener('click', function () { show(idx + 1); });
+  dlg.querySelector('.pub-lightbox__close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+  dlg.addEventListener('close', function () { img.removeAttribute('src'); });
+});
+</script>
+  {% endunless %}
+{% endif %}
