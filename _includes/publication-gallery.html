@@ -9,14 +9,14 @@
 {% assign pub = include.pub | default: page %}
 {% assign gallery_slug = pub.path | split: "/" | last | split: "." | first %}
 {% capture gallery_dir %}/images/publications/{{ gallery_slug }}/{% endcapture %}
-{% assign gallery_files = site.static_files | sort: "relative_path" %}
+{% assign gallery_files = site.static_files | sort: "path" %}
 {% capture gallery_items %}
   {% for f in gallery_files %}
-    {% unless f.relative_path contains gallery_dir %}{% continue %}{% endunless %}
+    {% unless f.path contains gallery_dir %}{% continue %}{% endunless %}
     {% assign ext = f.extname | downcase %}
     {% case ext %}
       {% when ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" %}
-        <a class="pub-gallery__item" href="{{ base_path }}{{ f.relative_path }}"><img src="{{ base_path }}{{ f.relative_path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ f.basename | escape }}" loading="lazy"></a>
+        <a class="pub-gallery__item" href="{{ base_path }}{{ f.path }}"><img src="{{ base_path }}{{ f.path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ f.basename | escape }}" loading="lazy"></a>
     {% endcase %}
   {% endfor %}
 {% endcapture %}
