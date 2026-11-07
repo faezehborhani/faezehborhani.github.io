@@ -1,7 +1,7 @@
 ---
 title: "Privacy Leakage in Collaborative AR Annotation"
 collection: portfolio
-order: 4
+order: 5
 venue: "Under review"
 excerpt: "Shows that text and sketch annotations in collaborative XR can reveal their author even in anonymous settings, using style-based authorship attribution attacks, and proposes lightweight defenses: LLM paraphrasing and summarization for text, and beautification for sketches."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page

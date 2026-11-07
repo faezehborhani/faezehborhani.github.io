@@ -1,7 +1,7 @@
 ---
 title: "Gender Swapping in Virtual Reality"
 collection: portfolio
-order: 5
+order: 6
 venue: "IEEE ISMAR Adjunct 2023 (Poster); M.S. thesis, Colorado State University, 2020"
 excerpt: "A virtual reality system for gender swapping to increase empathy against stereotype threats in computer science job interviews."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page

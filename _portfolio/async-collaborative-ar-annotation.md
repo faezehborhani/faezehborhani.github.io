@@ -1,7 +1,7 @@
 ---
 title: "Annotation in Asynchronous Collaborative AR"
 collection: portfolio
-order: 6
+order: 7
 venue: "IEEE VR 2022 Doctoral Consortium"
 excerpt: "Annotation in asynchronous collaborative immersive analytic environments using augmented reality."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page
