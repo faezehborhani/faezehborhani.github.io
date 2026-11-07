@@ -5,7 +5,8 @@ order: 3
 venue: "IEEE ISMAR Adjunct 2026 (Alt'ISMAR Workshop)"
 excerpt: "Comparing visual-only and multimodal notification design for improved noticeability in augmented reality."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page
-# video: /files/videos/beyond-the-beep.mp4   # enable once compressed (<100 MB)
+video: /files/videos/beyond-the-beep-compressed.mp4
+video_poster: /files/videos/beyond-the-beep-Notification-teaser.png
 # images:
 #   - /images/projects/<file>.jpg
 ---
