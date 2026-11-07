@@ -13,3 +13,5 @@ node_modules
 package-lock.json
 # Local paper PDFs, used only to copy abstracts; not published
 _paper-pdfs/
+# Local abstracts, pasted in to copy onto publication pages; not published
+_paper-abstracts/
