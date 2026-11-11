@@ -1,0 +1,28 @@
+{%- comment -%}
+  News timeline for the home page. Items come from _data/news.yml (newest first).
+  The first `include.show` items are visible; the rest fold under "Older news".
+  Output is kept unindented so Markdown pages don't turn it into code blocks.
+{%- endcomment -%}
+{%- assign show = include.show | default: 8 -%}
+{%- assign label_list = "paper:Paper,award:Award,work:Career,degree:Milestone,teaching:Teaching" | split: "," -%}
+<div class="news">
+<ul class="news-list">
+{%- for item in site.data.news -%}
+{%- if forloop.index0 == show %}
+</ul>
+<details class="news-older">
+<summary>Older news</summary>
+<ul class="news-list">
+{%- endif -%}
+{%- assign label = item.kind -%}
+{%- for pair in label_list -%}
+{%- assign kv = pair | split: ":" -%}
+{%- if kv[0] == item.kind -%}{%- assign label = kv[1] -%}{%- endif -%}
+{%- endfor %}
+<li class="news-item news-item--{{ item.kind }}"><span class="news-item__date">{{ item.date }}</span><span class="news-item__body"><span class="news-item__tag">{{ label }}</span> {{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
+{%- endfor %}
+</ul>
+{%- if site.data.news.size > show %}
+</details>
+{%- endif %}
+</div>

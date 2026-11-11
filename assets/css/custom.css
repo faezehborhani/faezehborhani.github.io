@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Site design overrides — "clean academic" look.
+   Plain CSS (not Sass) so it can never break the Jekyll build.
+   Loaded after main.css from _includes/head/custom.html.
+   ========================================================================== */
+
+:root {
+  --accent: #1f4e79;          /* navy, matches the CV headings */
+  --accent-dark: #163a5a;
+  --accent-soft: #e8eef5;
+  --text: #2b2f33;
+  --muted: #6b737b;
+  --rule: #e3e6ea;
+  --font-body: "Source Sans 3", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-head: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Base type ---------- */
+html { font-size: 17px; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.6;
+  background: #fff;
+}
+h1, h2, h3, h4, h5, h6,
+.page__title, .author__name, .archive__item-title {
+  font-family: var(--font-head);
+  color: #1c2228;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus { color: var(--accent-dark); text-decoration: underline; }
+a:visited { color: var(--accent); }
+
+/* ---------- Header / navigation ---------- */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .04);
+}
+.masthead__menu-item--lg a {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--accent) !important;
+  letter-spacing: .01em;
+}
+.greedy-nav a {
+  color: #3d454d;
+  font-weight: 500;
+}
+.greedy-nav a:hover { color: var(--accent); text-decoration: none; }
+.greedy-nav .visible-links a:before { background: var(--accent); }
+
+/* ---------- Sidebar ---------- */
+.author__avatar img {
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px var(--rule), 0 4px 14px rgba(0, 0, 0, .08);
+}
+.author__name { font-size: 1.15em; }
+.author__bio { color: var(--muted); }
+.author__urls a { color: #3d454d; }
+.author__urls a:hover { color: var(--accent); }
+
+/* ---------- Page titles and section headings ---------- */
+.page__title {
+  font-weight: 700;
+  color: #1c2228;
+}
+.page__content h1,
+.archive > h2 {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 2.2em 0 .8em;
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--accent-soft);
+}
+.archive > h2 + hr { display: none; }          /* publication category rule duplicates the border */
+.page__content h3 { color: #1c2228; }
+
+/* ---------- Archive lists (publications, talks, teaching) ---------- */
+.list__item .archive__item {
+  padding: .9em 0 1em;
+  border-bottom: 1px solid var(--rule);
+}
+.list__item:last-child .archive__item { border-bottom: 0; }
+.archive__item-title {
+  font-size: 1.05em;
+  line-height: 1.35;
+  margin: 0 0 .3em;
+}
+.archive__item-title a { color: #1c2228; }
+.archive__item-title a:hover { color: var(--accent); }
+.archive__item p { font-size: .9em; margin: .2em 0; color: #4a525a; }
+.archive__item-excerpt { color: var(--muted); }
+
+/* ---------- Home page: news timeline ---------- */
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--accent-soft);
+}
+.news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  gap: .9em;
+  padding: .55em 0 .55em 1.1em;
+  margin: 0;
+  font-size: .95em;
+}
+.news-item:before {                          /* timeline dot */
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 1.05em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--accent);
+}
+.news-item__date {
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.news-item__tag {
+  display: inline-block;
+  font-size: .72em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: .05em .55em;
+  margin-right: .35em;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  vertical-align: .12em;
+}
+.news-item--award .news-item__tag { background: #fbf1dc; color: #8a5a00; }
+.news-item--award:before { border-color: #c98a00; }
+.news-older { margin-top: .4em; }
+.news-older summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .95em;
+  padding: .4em 0 .4em 1.1em;
+}
+.news-older[open] summary { margin-bottom: .2em; }
+
+@media (max-width: 600px) {
+  .news-item { grid-template-columns: 1fr; gap: .1em; }
+}
+
+/* ---------- Home page: community service ---------- */
+.service-list {
+  columns: 2 18em;
+  column-gap: 2em;
+  padding-left: 0;
+  list-style: none;
+  font-size: .92em;
+}
+.service-list li {
+  break-inside: avoid;
+  margin: 0 0 .35em;
+}
+
+/* ---------- CV page ---------- */
+.page__content ul li { margin-bottom: .35em; }
+
+/* ---------- Footer ---------- */
+.page__footer {
+  background: #f6f7f9;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+}
