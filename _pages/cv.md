@@ -106,28 +106,6 @@ Publications 📚
 - **Borhani, Z.** — *Using Gender Swap in Virtual Reality for Increasing Empathy Against Stereotype Threats.* Master's thesis, Colorado State University, 2020. Advisor: F. R. Ortega. [link](https://www.proquest.com/openview/c8eaf2dfeef269cae04c3ba5de35714d/1?pq-origsite=gscholar&cbl=18750&diss=y)
 
 
-Manuscripts Under Review & Work in Progress ⏳
-======
-- Ebrahimpour-Boroojeny, A., Yang, X., Schapiro, S., **Borhani, Z.**, Ortega, F. R., Zheng, Y., & Zhai, C. — "Resisting Harmful Instructions through Training-Free Weight Editing." *Under review.*
-
-- **Borhani, Z.**, Ebrahimpour-Boroojeny, A., & Ortega, F. R. — "Small Cues, Big Differences: Evaluating Interaction and Presentation for Annotation Retrieval in AR." *Under review.* [arXiv](https://arxiv.org/abs/2509.11401)
-
-- **Borhani, Z.**, Ebrahimpour-Boroojeny, A., & Ortega, F. R. — "Privacy Leakage in Collaborative AR Annotation Systems." *Under review.*  
-  _Summary:_ Shows that text and sketch annotations in collaborative XR can reveal their author even in anonymous settings, using style-based authorship attribution attacks, and proposes lightweight defenses: LLM paraphrasing and summarization for text, and beautification for sketches.
-
-- Gaddy, V., **Borhani, Z.**, & Ortega, F. R. — "Implementing Novice-Expert Pair Coaching in Intermediate Level CS Recitations." *Under review.*  
-  _Summary:_ Evaluates novice-expert pair coaching in a challenging intermediate software development course across two studies over 1.5 semesters, finding positive effects on academic and psychological outcomes, most pronounced for programming and engineering skills.
-
-- **Borhani, Z.**, Coler, A. S., Blanchard, N., Mastorakis, S., Shannigrahi, S., Szafir, D., Khadka, V., & Ortega, F. R. — "Workshop on Distributed Interactive Systems for Collaboration Experiences (DISCE): Surveys." *In preparation.*  
-  _Summary:_ Reports three surveys distributed at the DISCE workshop on the state, challenges, and requirements of collaborative AR/VR systems, highlighting networking limits (latency, reliability), the lack of scalable tools, and the need for better interaction and infrastructure support.
-
-- Asif, A. U. Z., **Borhani, Z.**, Barrera Machuca, M. D., Batmaz, A. U., & Ortega, F. R. — "Understanding Virtual Reality Sculpting Tools: An Artists' Perspective on Current Challenges for Gesture Interactions." *Work in progress.*  
-  _Summary:_ A user study with 12 fine-arts-trained artists sculpting in ShapeLab that evaluates the usability, workload, and presence of controller-based VR sculpting to identify the limits of current techniques and inform artist-centered gesture interactions.
-
-- Buckman, M. J., **Borhani, Z.**, McCoy, H., Dong, Y., Guo, Y., Atadero, R., Hausman, H., Rhodes, M. G., Moraes, M., & Ortega, F. R. — "Exploring Visualization and Interaction Techniques for Wind Simulation in Virtual Reality." *Work in progress.*  
-  _Summary:_ A 2 × 2 within-subjects study comparing two wind visualizations (arrows and particle-based streamlines) and two input modalities (VR controllers and hand gestures), measuring usability (SUS), workload (NASA-TLX), and perceived visualization clarity to derive design guidelines for educational VR scientific simulations.
-
-
 Teaching 👩‍🏫
 ======
 - **Colorado State University**
