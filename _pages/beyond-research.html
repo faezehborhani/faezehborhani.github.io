@@ -9,7 +9,7 @@ author_profile: true
   Photos appear automatically: drop numbered images (1-foo.jpg, 2-bar.jpg, ...) into
     images/personal/events/          professional moments
     images/personal/afto/            Afto
-    images/personal/interests/<name>/  drawing, hiking, music, astronomy
+    images/personal/interests/<name>/  drawing, hiking, animations, astronomy
   Empty folders simply show no gallery.
 {% endcomment %}
 
@@ -76,11 +76,11 @@ author_profile: true
       {% include publication-gallery.html dir="/images/personal/interests/hiking/" label="Hiking" %}
     </article>
 
-    <article class="interest interest--music">
-      <span class="interest__icon" aria-hidden="true">🎧</span>
-      <h3>Music</h3>
-      <p>I enjoy listening to music and paying attention to its sounds and textures. It is my favorite companion while working, walking, or relaxing.</p>
-      {% include publication-gallery.html dir="/images/personal/interests/music/" label="Music" %}
+    <article class="interest interest--animations">
+      <span class="interest__icon" aria-hidden="true">🎬</span>
+      <h3>Animations</h3>
+      <p>I love animated films and series. The storytelling, art styles, and imagination behind them never fail to inspire me.</p>
+      {% include publication-gallery.html dir="/images/personal/interests/animations/" label="Animations" %}
     </article>
 
     <article class="interest interest--astronomy">
@@ -177,7 +177,7 @@ author_profile: true
 .interest:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(20, 40, 60, .12); }
 .interest--drawing   { --tint: #d9668a; --tint-soft: #fbe9ef; }
 .interest--hiking    { --tint: #4f9a5b; --tint-soft: #e7f4e9; }
-.interest--music     { --tint: #7a5cc7; --tint-soft: #efeafb; }
+.interest--animations{ --tint: #7a5cc7; --tint-soft: #efeafb; }
 .interest--astronomy { --tint: #2f5d9e; --tint-soft: #e6eef9; }
 .interest__icon {
   display: inline-flex; align-items: center; justify-content: center;
