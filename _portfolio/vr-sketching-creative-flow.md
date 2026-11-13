@@ -6,6 +6,7 @@ venue: "32nd ACM Symposium on Virtual Reality Software and Technology (VRST 2026
 excerpt: "Comparing unimodal and multimodal input techniques in the creative process of sketching in virtual reality."
 # teaser: /images/projects/<file>.jpg      # thumbnail on the Projects page
 video: /files/videos/vr-sketching-creative-flow.mp4
+video_poster: /files/videos/vr-sketching-creative-flow-teaser.png
 # images:
 #   - /images/projects/<file>.jpg
 ---
