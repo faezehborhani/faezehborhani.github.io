@@ -5,11 +5,17 @@
   Files are shown in order of their leading number (1-foo.png, 2-bar.jpg, ... 10-baz.png),
   then any unnumbered files alphabetically; clicking one opens it full size.
   Pass pub=post on list pages; defaults to page.
+  Or pass dir="/images/some/folder/" (and optionally label="...") to show any image folder.
 {% endcomment %}
 {% include base_path %}
 {% assign pub = include.pub | default: page %}
-{% assign gallery_slug = pub.path | split: "/" | last | split: "." | first %}
-{% capture gallery_dir %}/images/publications/{{ gallery_slug }}/{% endcapture %}
+{% if include.dir %}
+  {% assign gallery_dir = include.dir %}
+{% else %}
+  {% assign gallery_slug = pub.path | split: "/" | last | split: "." | first %}
+  {% capture gallery_dir %}/images/publications/{{ gallery_slug }}/{% endcapture %}
+{% endif %}
+{% assign gallery_label = include.label | default: pub.title | strip_html | escape %}
 {% comment %} Sort key: leading number zero-padded (so 2- comes before 10-), unnumbered files last. {% endcomment %}
 {%- capture gallery_keys -%}
   {%- for f in site.static_files -%}
@@ -32,7 +38,7 @@
     {% if k == "" %}{% continue %}{% endif %}
     {% assign img_path = k | split: "|" | last %}
     {% assign img_name = img_path | split: "/" | last | split: "." | first %}
-    <a class="pub-gallery__item" href="{{ base_path }}{{ img_path }}"><img src="{{ base_path }}{{ img_path }}" alt="{{ pub.title | strip_html | escape }}, figure {{ img_name | escape }}" loading="lazy"></a>
+    <a class="pub-gallery__item" href="{{ base_path }}{{ img_path }}"><img src="{{ base_path }}{{ img_path }}" alt="{{ gallery_label }}, {{ img_name | escape }}" loading="lazy"></a>
   {% endfor %}
 {% endcapture %}
 {% assign gallery_items = gallery_items | strip %}

@@ -1,0 +1,75 @@
+---
+layout: single
+title: "Beyond Research"
+permalink: /beyond-research/
+author_profile: true
+---
+
+{% comment %}
+  Photos appear automatically: drop numbered images (1-foo.jpg, 2-bar.jpg, ...) into
+    images/personal/events/          professional moments
+    images/personal/afto/            Afto
+    images/personal/interests/<name>/  drawing, hiking, music, astronomy
+  Empty folders simply show no gallery.
+{% endcomment %}
+
+<div class="personal">
+
+<p class="personal__intro">Research is a big part of my life, but not all of it. Here is a glimpse of the moments, the little family member, and the hobbies that keep me curious and grounded.</p>
+
+<h2>Professional Moments</h2>
+<p>Snapshots from talks, poster sessions, conferences, and other milestones along my PhD journey.</p>
+{% include publication-gallery.html dir="/images/personal/events/" label="Professional moment" %}
+
+<h2>Meet Afto 🐈</h2>
+<p>One of the best things that happened to me during my PhD was becoming a mom to a kitten named <strong>Afto</strong>. Afto quickly became part of my everyday life, keeping me company through long writing sessions, reminding me to take breaks, and making home feel warmer at the end of a long day.</p>
+{% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
+
+<h2>Things I Love</h2>
+<div class="interest-grid">
+
+  <section class="interest">
+    <h3>🎨 Drawing</h3>
+    <p>Drawing is my way to slow down and see things more carefully. It also shapes how I think about creativity and sketching in my research.</p>
+    {% include publication-gallery.html dir="/images/personal/interests/drawing/" label="Drawing" %}
+  </section>
+
+  <section class="interest">
+    <h3>🥾 Hiking</h3>
+    <p>I love getting out on the trails, where fresh air, open views, and a good climb help me clear my head.</p>
+    {% include publication-gallery.html dir="/images/personal/interests/hiking/" label="Hiking" %}
+  </section>
+
+  <section class="interest">
+    <h3>🎧 Music</h3>
+    <p>I enjoy listening to music and paying attention to its sounds and textures. It is my favorite companion while working, walking, or relaxing.</p>
+    {% include publication-gallery.html dir="/images/personal/interests/music/" label="Music" %}
+  </section>
+
+  <section class="interest">
+    <h3>🔭 Astronomy</h3>
+    <p>On clear nights, I set up my telescope and look at the Moon, planets, and stars. Stargazing never stops being a reminder of how much is out there to explore.</p>
+    {% include publication-gallery.html dir="/images/personal/interests/astronomy/" label="Astronomy" %}
+  </section>
+
+</div>
+</div>
+
+<style>
+.personal__intro { font-size: 1.05em; color: #4a525a; }
+.personal h2 {
+  font-size: 1.35em; color: var(--accent, #1f4e79);
+  margin: 2em 0 .6em; padding-bottom: .35em;
+  border-bottom: 2px solid var(--accent-soft, #e8eef5);
+}
+.personal .pub-gallery__item { width: 150px; height: 112px; }
+.interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
+@media (max-width: 700px) { .interest-grid { grid-template-columns: 1fr; } }
+.interest {
+  padding: 1rem 1.1rem; border: 1px solid var(--rule, #e3e6ea);
+  border-radius: 8px; background: #fafbfc;
+}
+.interest h3 { margin: 0 0 .4rem; font-size: 1.05em; }
+.interest p { font-size: .92em; margin: 0 0 .5rem; }
+.interest .pub-gallery__item { width: 110px; height: 82px; }
+</style>

@@ -11,6 +11,8 @@ I am a PhD candidate in Computer Science at Colorado State University, where I w
 
 More specifically, I am interested in how users perceive, learn, and interact with XR systems over time, including topics such as gesture memorability, annotation retrieval, XR privacy, cross-platform interaction consistency (AR vs. VR), multimodal input for creative tasks such as VR sketching, AR navigation and notification design, and the effectiveness of multimodal feedback. I also explore applications of XR in domains such as education (e.g., wind and physics simulations in VR), accessibility, and empathic computing.
 
+Outside research, I am a proud mom to my cat Afto, and I enjoy drawing, hiking, music, and stargazing with my telescope. [More about life beyond research →](/beyond-research/)
+
 Latest News
 ======
 
