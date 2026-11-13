@@ -15,66 +15,188 @@ author_profile: true
 
 <div class="personal">
 
-<p class="personal__intro">Research is a big part of my life, but not all of it. Here is a glimpse of the moments, the little family member, and the hobbies that keep me curious and grounded.</p>
-
-<h2>Professional Moments</h2>
-<p>Snapshots from talks, poster sessions, conferences, and other milestones along my PhD journey.</p>
-{% include publication-gallery.html dir="/images/personal/events/" label="Professional moment" %}
-
-<h2>Meet Afto 🐈</h2>
-<p>I recently became a mom to a kitten named <strong>Afto</strong>! Even in this short time, Afto has become a big part of my everyday life: keeping me company while I work, reminding me to take breaks, and making home feel warmer at the end of a long day.</p>
-<p><strong>Fun facts about Afto:</strong></p>
-<ul>
-  <li><strong>His name:</strong> Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can find the original Afto in one of the pictures below!</li>
-  <li><strong>Extra toes:</strong> Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</li>
-</ul>
-{% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
-
-<h2>Things I Love</h2>
-<div class="interest-grid">
-
-  <section class="interest">
-    <h3>🎨 Drawing</h3>
-    <p>Drawing is my way to slow down and see things more carefully. It also shapes how I think about creativity and sketching in my research.</p>
-    {% include publication-gallery.html dir="/images/personal/interests/drawing/" label="Drawing" %}
-  </section>
-
-  <section class="interest">
-    <h3>🥾 Hiking</h3>
-    <p>I love getting out on the trails, where fresh air, open views, and a good climb help me clear my head.</p>
-    {% include publication-gallery.html dir="/images/personal/interests/hiking/" label="Hiking" %}
-  </section>
-
-  <section class="interest">
-    <h3>🎧 Music</h3>
-    <p>I enjoy listening to music and paying attention to its sounds and textures. It is my favorite companion while working, walking, or relaxing.</p>
-    {% include publication-gallery.html dir="/images/personal/interests/music/" label="Music" %}
-  </section>
-
-  <section class="interest">
-    <h3>🔭 Astronomy</h3>
-    <p>On clear nights, I set up my telescope and look at the Moon, planets, and stars. Stargazing never stops being a reminder of how much is out there to explore.</p>
-    {% include publication-gallery.html dir="/images/personal/interests/astronomy/" label="Astronomy" %}
-  </section>
-
+<div class="personal-hero">
+  <p class="personal-hero__text">Research is a big part of my life, but not all of it. Here is a glimpse of the moments, the little family member, and the hobbies that keep me curious and grounded.</p>
+  <nav class="personal-hero__nav" aria-label="Sections on this page">
+    <a href="#moments">🎓 Moments</a>
+    <a href="#afto">🐈 Afto</a>
+    <a href="#interests">✨ Things I love</a>
+  </nav>
 </div>
+
+<section class="personal-section" id="moments">
+  <p class="personal-eyebrow">Milestones</p>
+  <h2>Professional Moments</h2>
+  <p class="personal-lead">Snapshots from talks, poster sessions, conferences, and other milestones along my PhD journey.</p>
+  <div class="personal-moments">
+    {% include publication-gallery.html dir="/images/personal/events/" label="Professional moment" %}
+  </div>
+</section>
+
+<section class="personal-section" id="afto">
+  <p class="personal-eyebrow">Family</p>
+  <h2>Meet Afto 🐈</h2>
+  <div class="afto-card">
+    <div class="afto-card__text">
+      <p>I recently became a mom to a kitten named <strong>Afto</strong>! Even in this short time, Afto has become a big part of my everyday life: keeping me company while I work, reminding me to take breaks, and making home feel warmer at the end of a long day.</p>
+      <p class="afto-card__facts-title">Fun facts about Afto</p>
+      <ul class="afto-facts">
+        <li class="afto-fact">
+          <span class="afto-fact__icon" aria-hidden="true">🏴‍☠️</span>
+          <span><strong>His name:</strong> Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can find the original Afto in one of the pictures!</span>
+        </li>
+        <li class="afto-fact">
+          <span class="afto-fact__icon" aria-hidden="true">🐾</span>
+          <span><strong>Extra toes:</strong> Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
+        </li>
+      </ul>
+    </div>
+    <div class="afto-card__photos">
+      {% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
+    </div>
+  </div>
+</section>
+
+<section class="personal-section" id="interests">
+  <p class="personal-eyebrow">Hobbies</p>
+  <h2>Things I Love</h2>
+  <div class="interest-grid">
+
+    <article class="interest interest--drawing">
+      <span class="interest__icon" aria-hidden="true">🎨</span>
+      <h3>Drawing</h3>
+      <p>Drawing is my way to slow down and see things more carefully. It also shapes how I think about creativity and sketching in my research.</p>
+      {% include publication-gallery.html dir="/images/personal/interests/drawing/" label="Drawing" %}
+    </article>
+
+    <article class="interest interest--hiking">
+      <span class="interest__icon" aria-hidden="true">🥾</span>
+      <h3>Hiking</h3>
+      <p>I love getting out on the trails, where fresh air, open views, and a good climb help me clear my head.</p>
+      {% include publication-gallery.html dir="/images/personal/interests/hiking/" label="Hiking" %}
+    </article>
+
+    <article class="interest interest--music">
+      <span class="interest__icon" aria-hidden="true">🎧</span>
+      <h3>Music</h3>
+      <p>I enjoy listening to music and paying attention to its sounds and textures. It is my favorite companion while working, walking, or relaxing.</p>
+      {% include publication-gallery.html dir="/images/personal/interests/music/" label="Music" %}
+    </article>
+
+    <article class="interest interest--astronomy">
+      <span class="interest__icon" aria-hidden="true">🔭</span>
+      <h3>Astronomy</h3>
+      <p>On clear nights, I set up my telescope and look at the Moon, planets, and stars. Stargazing never stops being a reminder of how much is out there to explore.</p>
+      {% include publication-gallery.html dir="/images/personal/interests/astronomy/" label="Astronomy" %}
+    </article>
+
+  </div>
+</section>
+
 </div>
 
 <style>
-.personal__intro { font-size: 1.05em; color: #4a525a; }
-.personal h2 {
-  font-size: 1.35em; color: var(--accent, #1f4e79);
-  margin: 2em 0 .6em; padding-bottom: .35em;
-  border-bottom: 2px solid var(--accent-soft, #e8eef5);
+/* ---------- Beyond Research page ---------- */
+.personal { --warm: #fdf6ec; --warm-line: #f1e2c8; --card-shadow: 0 2px 10px rgba(20, 40, 60, .07); }
+
+/* Intro banner */
+.personal-hero {
+  margin: .5rem 0 2.5rem; padding: 1.5rem 1.6rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-soft, #e8eef5) 0%, #f4f0fa 55%, var(--warm) 100%);
 }
-.personal .pub-gallery__item { width: 150px; height: 112px; }
-.interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
-@media (max-width: 700px) { .interest-grid { grid-template-columns: 1fr; } }
+.personal-hero__text { font-size: 1.08em; line-height: 1.65; color: #2b2f33; margin: 0 0 1rem; }
+.personal-hero__nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.personal-hero__nav a {
+  display: inline-block; padding: .3em .9em; border-radius: 999px;
+  background: rgba(255, 255, 255, .8); color: var(--accent, #1f4e79);
+  font-size: .88em; font-weight: 600; text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .06); transition: background .2s, transform .2s;
+}
+.personal-hero__nav a:hover, .personal-hero__nav a:focus { background: #fff; transform: translateY(-1px); text-decoration: none; }
+
+/* Section headings */
+.personal-section { margin: 0 0 3rem; scroll-margin-top: 4.5rem; }
+.personal-eyebrow {
+  margin: 0 0 .1rem; font-size: .75em; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: #8a95a0;
+}
+.personal h2 { font-size: 1.5em; color: var(--accent, #1f4e79); margin: 0 0 .5rem; padding: 0; border: 0; }
+.personal-lead { color: #4a525a; margin: 0 0 1rem; }
+
+/* Photo grids (re-styles the shared gallery on this page only) */
+.personal .pub-gallery { display: grid; gap: .8rem; margin: 0; }
+.personal .pub-gallery__item {
+  width: auto; height: auto; border-radius: 12px;
+  box-shadow: var(--card-shadow); transition: transform .25s, box-shadow .25s;
+}
+.personal .pub-gallery__item:hover, .personal .pub-gallery__item:focus {
+  transform: translateY(-3px); box-shadow: 0 8px 22px rgba(20, 40, 60, .16);
+}
+.personal .pub-gallery__item:hover img, .personal .pub-gallery__item:focus img { transform: none; }
+
+.personal-moments .pub-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.personal-moments .pub-gallery__item { aspect-ratio: 16 / 9; }
+
+/* Afto */
+.afto-card {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 1.5rem;
+  align-items: start; padding: 1.4rem;
+  border-radius: 14px; background: var(--warm); border: 1px solid var(--warm-line);
+}
+.afto-card__text p { margin: 0 0 1rem; }
+.afto-card__facts-title {
+  font-family: var(--font-head, Georgia, serif); font-weight: 700; color: #8a5a00;
+  margin-bottom: .6rem !important;
+}
+.afto-facts { list-style: none; margin: 0; padding: 0; }
+.afto-fact {
+  display: flex; gap: .75rem; align-items: flex-start;
+  margin: 0 0 .7rem; padding: .75rem .9rem; border-radius: 10px;
+  background: #fff; box-shadow: 0 1px 4px rgba(120, 80, 0, .08); font-size: .93em;
+}
+.afto-fact:last-child { margin-bottom: 0; }
+.afto-fact__icon {
+  flex: none; width: 2.1em; height: 2.1em; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--warm); font-size: 1.1em;
+}
+.afto-card__photos .pub-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
+
+/* Interests */
+.interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
 .interest {
-  padding: 1rem 1.1rem; border: 1px solid var(--rule, #e3e6ea);
-  border-radius: 8px; background: #fafbfc;
+  position: relative; padding: 1.2rem 1.25rem 1.1rem;
+  border-radius: 14px; background: #fff; border: 1px solid var(--rule, #e3e6ea);
+  border-top: 4px solid var(--tint); box-shadow: var(--card-shadow);
+  transition: transform .25s, box-shadow .25s;
 }
-.interest h3 { margin: 0 0 .4rem; font-size: 1.05em; }
-.interest p { font-size: .92em; margin: 0 0 .5rem; }
-.interest .pub-gallery__item { width: 110px; height: 82px; }
+.interest:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(20, 40, 60, .12); }
+.interest--drawing   { --tint: #d9668a; --tint-soft: #fbe9ef; }
+.interest--hiking    { --tint: #4f9a5b; --tint-soft: #e7f4e9; }
+.interest--music     { --tint: #7a5cc7; --tint-soft: #efeafb; }
+.interest--astronomy { --tint: #2f5d9e; --tint-soft: #e6eef9; }
+.interest__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.6em; height: 2.6em; border-radius: 50%;
+  background: var(--tint-soft); font-size: 1.25em; margin-bottom: .6rem;
+}
+.interest h3 { margin: 0 0 .35rem; font-size: 1.1em; color: #1c2228; }
+.interest p { font-size: .92em; color: #4a525a; margin: 0; }
+.interest .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: .9rem; gap: .5rem; }
+.interest .pub-gallery__item { aspect-ratio: 1 / 1; border-radius: 8px; }
+
+/* Small screens */
+@media (max-width: 760px) {
+  .afto-card { grid-template-columns: 1fr; padding: 1.1rem; }
+  .interest-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .personal-hero { padding: 1.2rem; }
+  .personal-moments .pub-gallery { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .personal * { transition: none !important; }
+}
 </style>
