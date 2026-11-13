@@ -135,7 +135,7 @@ author_profile: true
 }
 .personal .pub-gallery__item:hover img, .personal .pub-gallery__item:focus img { transform: none; }
 
-.personal-moments .pub-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.personal-moments .pub-gallery { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; }
 .personal-moments .pub-gallery__item { aspect-ratio: 16 / 9; }
 
 /* Afto */
@@ -161,8 +161,10 @@ author_profile: true
   display: inline-flex; align-items: center; justify-content: center;
   background: var(--warm); font-size: 1.1em;
 }
-.afto-card__photos .pub-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* First photo is a wide feature across the top; the rest sit three per row beneath it */
+.afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
 .afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
+.afto-card__photos .pub-gallery__item:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
 
 /* Interests */
 .interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
@@ -194,7 +196,7 @@ author_profile: true
 }
 @media (max-width: 480px) {
   .personal-hero { padding: 1.2rem; }
-  .personal-moments .pub-gallery { grid-template-columns: 1fr; }
+  .personal-moments .pub-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .personal * { transition: none !important; }
