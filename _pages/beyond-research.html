@@ -177,13 +177,10 @@ author_profile: true
 /* Fun facts: their own section at the end of the page, two side by side */
 .afto-facts-card { padding: 1.1rem; border-radius: 14px; background: var(--warm); border: 1px solid var(--warm-line); }
 .afto-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-/* Circular photos: first one large, the rest in a row of smaller circles beneath it */
-.afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; justify-items: center; }
-.afto-card__photos .pub-gallery__item {
-  width: 100%; max-width: 110px; aspect-ratio: 1 / 1; border-radius: 50%;
-  border: 3px solid #fff; box-shadow: 0 2px 8px rgba(120, 80, 0, .15);
-}
-.afto-card__photos .pub-gallery__item:first-child { grid-column: 1 / -1; max-width: 200px; }
+/* First photo is a wide feature across the top; the rest sit three per row beneath it */
+.afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
+.afto-card__photos .pub-gallery__item:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
 
 /* Interests */
 .interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
