@@ -39,6 +39,11 @@ author_profile: true
   <div class="afto-card">
     <div class="afto-card__text">
       <p>I recently became a mom to a kitten named <strong>Afto</strong>! Even in this short time, Afto has become a big part of my everyday life: keeping me company while I work, reminding me to take breaks, and making home feel warmer at the end of a long day.</p>
+    </div>
+    <div class="afto-card__photos">
+      {% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
+    </div>
+    <div class="afto-card__facts">
       <p class="afto-card__facts-title">Fun facts about Afto</p>
       <ul class="afto-facts">
         <li class="afto-fact">
@@ -56,9 +61,6 @@ author_profile: true
           </div>
         </li>
       </ul>
-    </div>
-    <div class="afto-card__photos">
-      {% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
     </div>
   </div>
 </section>
@@ -172,9 +174,16 @@ author_profile: true
 }
 .afto-fact__text { font-size: .82rem; line-height: 1.5; color: #4a525a; }
 /* First photo is a wide feature across the top; the rest sit three per row beneath it */
-.afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
-.afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
-.afto-card__photos .pub-gallery__item:first-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
+/* Fun facts run full width under the story and photos, two side by side */
+.afto-card__facts { grid-column: 1 / -1; padding-top: 1rem; border-top: 1px dashed var(--warm-line); }
+.afto-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Circular photos: first one large, the rest in a row of smaller circles beneath it */
+.afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; justify-items: center; }
+.afto-card__photos .pub-gallery__item {
+  width: 100%; max-width: 110px; aspect-ratio: 1 / 1; border-radius: 50%;
+  border: 3px solid #fff; box-shadow: 0 2px 8px rgba(120, 80, 0, .15);
+}
+.afto-card__photos .pub-gallery__item:first-child { grid-column: 1 / -1; max-width: 200px; }
 
 /* Interests */
 .interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
@@ -202,6 +211,7 @@ author_profile: true
 /* Small screens */
 @media (max-width: 760px) {
   .afto-card { grid-template-columns: 1fr; padding: 1.1rem; }
+  .afto-facts { grid-template-columns: 1fr; }
   .interest-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
