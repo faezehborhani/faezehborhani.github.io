@@ -43,25 +43,6 @@ author_profile: true
     <div class="afto-card__photos">
       {% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
     </div>
-    <div class="afto-card__facts">
-      <p class="afto-card__facts-title">Fun facts about Afto</p>
-      <ul class="afto-facts">
-        <li class="afto-fact">
-          <span class="afto-fact__icon" aria-hidden="true">🏴‍☠️</span>
-          <div class="afto-fact__body">
-            <span class="afto-fact__label">His name</span>
-            <span class="afto-fact__text">Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can find the original Afto in one of the pictures!</span>
-          </div>
-        </li>
-        <li class="afto-fact">
-          <span class="afto-fact__icon" aria-hidden="true">🐾</span>
-          <div class="afto-fact__body">
-            <span class="afto-fact__label">Extra toes</span>
-            <span class="afto-fact__text">Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
-          </div>
-        </li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -98,6 +79,29 @@ author_profile: true
       {% include publication-gallery.html dir="/images/personal/interests/astronomy/" label="Astronomy" %}
     </article>
 
+  </div>
+</section>
+
+<section class="personal-section afto-facts-section" id="afto-facts">
+  <p class="personal-eyebrow">Just for fun</p>
+  <h2>Fun Facts About Afto 🐾</h2>
+  <div class="afto-facts-card">
+    <ul class="afto-facts">
+      <li class="afto-fact">
+        <span class="afto-fact__icon" aria-hidden="true">🏴‍☠️</span>
+        <div class="afto-fact__body">
+          <span class="afto-fact__label">His name</span>
+          <span class="afto-fact__text">Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can spot the original Afto in one of his photos in the <a href="#afto">Meet Afto</a> section!</span>
+        </div>
+      </li>
+      <li class="afto-fact">
+        <span class="afto-fact__icon" aria-hidden="true">🐾</span>
+        <div class="afto-fact__body">
+          <span class="afto-fact__label">Extra toes</span>
+          <span class="afto-fact__text">Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -153,10 +157,6 @@ author_profile: true
   border-radius: 14px; background: var(--warm); border: 1px solid var(--warm-line);
 }
 .afto-card__text p { margin: 0 0 1rem; }
-.afto-card__facts-title {
-  font-size: .78em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: #8a5a00; margin-bottom: .5rem !important;
-}
 .afto-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
 .afto-fact {
   display: flex; gap: .7rem; align-items: flex-start;
@@ -174,8 +174,8 @@ author_profile: true
 }
 .afto-fact__text { font-size: .82rem; line-height: 1.5; color: #4a525a; }
 /* First photo is a wide feature across the top; the rest sit three per row beneath it */
-/* Fun facts run full width under the story and photos, two side by side */
-.afto-card__facts { grid-column: 1 / -1; padding-top: 1rem; border-top: 1px dashed var(--warm-line); }
+/* Fun facts: their own section at the end of the page, two side by side */
+.afto-facts-card { padding: 1.1rem; border-radius: 14px; background: var(--warm); border: 1px solid var(--warm-line); }
 .afto-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 /* Circular photos: first one large, the rest in a row of smaller circles beneath it */
 .afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; justify-items: center; }
