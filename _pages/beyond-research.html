@@ -44,7 +44,7 @@ author_profile: true
       {% include publication-gallery.html dir="/images/personal/afto/" label="Afto" %}
     </div>
     <div class="afto-card__facts">
-      <p class="afto-card__facts-title">Fun facts about Afto 🐾</p>
+      <p class="afto-card__facts-title">🐾 Fun facts about Afto</p>
       <ul class="afto-facts">
         <li class="afto-fact">
           <span class="afto-fact__icon" aria-hidden="true">🏴‍☠️</span>
@@ -58,6 +58,13 @@ author_profile: true
           <div class="afto-fact__body">
             <span class="afto-fact__label">Extra toes</span>
             <span class="afto-fact__text">Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
+          </div>
+        </li>
+        <li class="afto-fact">
+          <span class="afto-fact__icon" aria-hidden="true">🎃</span>
+          <div class="afto-fact__body">
+            <span class="afto-fact__label">Halloween kitty</span>
+            <span class="afto-fact__text">Afto is a true Halloween kitty: his Gotcha Day, the day he came home with me, was Halloween!</span>
           </div>
         </li>
       </ul>
@@ -171,12 +178,9 @@ author_profile: true
 .afto-fact__text { font-size: .82rem; line-height: 1.5; color: #4a525a; }
 /* First photo is a wide feature across the top; the rest sit three per row beneath it */
 /* Fun facts: one row across the card, below the story and photos */
-.afto-card__facts { grid-column: 1 / -1; padding-top: 1rem; border-top: 1px dashed var(--warm-line); }
-.afto-card__facts-title {
-  font-size: .78em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: #8a5a00; margin: 0 0 .5rem;
-}
-.afto-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.afto-card__facts { grid-column: 1 / -1; margin-top: -.25rem; }
+.afto-card__facts-title { font-size: .92em; font-weight: 700; color: #8a5a00; margin: 0 0 .45rem; }
+.afto-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* First photo is a wide feature across the top; the rest sit three per row beneath it */
 .afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
 .afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
