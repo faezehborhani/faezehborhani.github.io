@@ -43,11 +43,17 @@ author_profile: true
       <ul class="afto-facts">
         <li class="afto-fact">
           <span class="afto-fact__icon" aria-hidden="true">🏴‍☠️</span>
-          <span><strong>His name:</strong> Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can find the original Afto in one of the pictures!</span>
+          <div class="afto-fact__body">
+            <span class="afto-fact__label">His name</span>
+            <span class="afto-fact__text">Afto is named after a pirate cat puppet from the <em>Carnaval</em> show. You can find the original Afto in one of the pictures!</span>
+          </div>
         </li>
         <li class="afto-fact">
           <span class="afto-fact__icon" aria-hidden="true">🐾</span>
-          <span><strong>Extra toes:</strong> Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
+          <div class="afto-fact__body">
+            <span class="afto-fact__label">Extra toes</span>
+            <span class="afto-fact__text">Afto is a polydactyl cat, with two extra toes on each front paw and one extra toe on each back paw, which makes him an extraordinary climber!</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -146,21 +152,25 @@ author_profile: true
 }
 .afto-card__text p { margin: 0 0 1rem; }
 .afto-card__facts-title {
-  font-family: var(--font-head, Georgia, serif); font-weight: 700; color: #8a5a00;
-  margin-bottom: .6rem !important;
+  font-size: .78em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #8a5a00; margin-bottom: .5rem !important;
 }
-.afto-facts { list-style: none; margin: 0; padding: 0; }
+.afto-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
 .afto-fact {
-  display: flex; gap: .75rem; align-items: flex-start;
-  margin: 0 0 .7rem; padding: .75rem .9rem; border-radius: 10px;
-  background: #fff; box-shadow: 0 1px 4px rgba(120, 80, 0, .08); font-size: .93em;
+  display: flex; gap: .7rem; align-items: flex-start;
+  margin: 0; padding: .6rem .8rem; border-radius: 8px;
+  background: #fff; border-left: 3px solid #e0b25c;
 }
-.afto-fact:last-child { margin-bottom: 0; }
 .afto-fact__icon {
-  flex: none; width: 2.1em; height: 2.1em; border-radius: 50%;
+  flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
-  background: var(--warm); font-size: 1.1em;
+  background: var(--warm); font-size: .95rem; margin-top: .1rem;
 }
+.afto-fact__body { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.afto-fact__label {
+  font-size: .8rem; font-weight: 700; color: #6b4600; line-height: 1.3;
+}
+.afto-fact__text { font-size: .82rem; line-height: 1.5; color: #4a525a; }
 /* First photo is a wide feature across the top; the rest sit three per row beneath it */
 .afto-card__photos .pub-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
 .afto-card__photos .pub-gallery__item { aspect-ratio: 1 / 1; border: 3px solid #fff; }
