@@ -1,0 +1,46 @@
+{%- comment -%}
+  "Get in Touch" block for the end of the home page. Links come from the author block in _config.yml,
+  so updating an address there updates it here. Output is kept unindented so Markdown pages
+  don't turn it into code blocks.
+{%- endcomment -%}
+{%- assign a = site.author -%}
+<div class="contact-card">
+<p class="contact-card__text">I am happy to connect about research collaborations, speaking invitations, and opportunities in HCI and extended reality. Email is the best way to reach me.</p>
+<div class="contact-card__actions">
+{%- if a.email %}
+<a class="contact-card__primary" href="mailto:{{ a.email }}">Email me</a>
+<span class="contact-card__email">{{ a.email }}</span>
+{%- endif %}
+</div>
+<ul class="contact-card__links">
+{%- if a.googlescholar %}<li><a href="{{ a.googlescholar }}"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a></li>{% endif -%}
+{%- if a.orcid %}<li><a href="{{ a.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i> ORCID</a></li>{% endif -%}
+{%- if a.github %}<li><a href="https://github.com/{{ a.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>{% endif -%}
+{%- if a.linkedin %}<li><a href="https://www.linkedin.com/in/{{ a.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>{% endif -%}
+{%- if a.location %}<li class="contact-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ a.location }}</li>{% endif -%}
+</ul>
+</div>
+<style>
+.contact-card {
+  margin: .4rem 0 1rem; padding: 1.2rem 1.4rem;
+  border: 1px solid var(--rule, #e3e6ea); border-left: 3px solid var(--accent, #1f4e79);
+  border-radius: 0 8px 8px 0; background: #f6f8fa;
+}
+.contact-card__text { margin: 0 0 .9rem; line-height: 1.6; }
+.contact-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-bottom: .9rem; }
+.contact-card__primary {
+  display: inline-block; padding: .4em 1.1em; border-radius: 6px;
+  background: var(--accent, #1f4e79); color: #fff !important; font-weight: 600; font-size: .92em;
+  text-decoration: none !important;
+}
+.contact-card__primary:hover, .contact-card__primary:focus { background: var(--accent-dark, #163a5a); }
+.contact-card__email { font-size: .92em; color: #4a525a; user-select: all; }
+.contact-card__links {
+  list-style: none; margin: 0; padding: .8rem 0 0; border-top: 1px solid var(--rule, #e3e6ea);
+  display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font-size: .9em;
+}
+.contact-card__links li { margin: 0; }
+.contact-card__links a { color: var(--accent, #1f4e79); font-weight: 600; }
+.contact-card__links i { width: 1.1em; text-align: center; margin-right: .2em; }
+.contact-card__location { color: #6b737b; }
+</style>

@@ -47,3 +47,8 @@ Community Service
 - 🥽 Organizing committee of [DISCE at IEEE VR 2021](https://sites.google.com/view/disce)
 - 🤝 Organizing Committee of Graduate poster session, CS CSU, Spring 2019
 {: .service-list}
+
+Get in Touch
+======
+
+{% include contact.html %}
