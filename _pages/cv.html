@@ -1,0 +1,451 @@
+---
+layout: archive
+title: "Curriculum Vitae"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+---
+
+{% include base_path %}
+{% assign ortega = "https://scholar.google.com/citations?user=AuBa0OAAAAAJ&hl=en" %}
+
+<div class="cv">
+
+{% comment %} PDF button shows automatically once files/cv.pdf exists. {% endcomment %}
+{% assign cv_pdf = "/files/cv.pdf" %}
+{% assign cv_pdf_found = site.static_files | where: "path", cv_pdf | first %}
+<div class="cv-top">
+  <p class="cv-updated">Last updated: November 2026</p>
+  {% if cv_pdf_found %}<a class="cv-download" href="{{ base_path }}{{ cv_pdf }}" target="_blank" rel="noopener">&#8595; Download PDF</a>{% endif %}
+</div>
+
+<!-- ============================ Research Interests ============================ -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Research Interests</h2>
+  <p class="cv-lead">Human–computer interaction in extended reality (XR): gesture, speech, and multimodal input; annotation and privacy in collaborative XR systems; AR navigation and notification systems; and XR for learning and accessibility.</p>
+</section>
+
+<!-- ================================ Education ================================= -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Education</h2>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2020 – 2026<br><span class="cv-muted">(expected)</span></div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>Ph.D., Computer Science</strong>, Colorado State University, Fort Collins, CO</div>
+      <div class="cv-entry__detail">Advisor: <a href="{{ ortega }}">Francisco R. Ortega</a></div>
+      <div class="cv-entry__detail">Research area: Interaction Modalities in Extended Reality</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2020</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>M.S., Computer Science</strong>, Colorado State University, Fort Collins, CO</div>
+      <div class="cv-entry__detail">Advisor: Francisco R. Ortega</div>
+      <div class="cv-entry__detail">Thesis: <em>Using Gender Swap in Virtual Reality for Increasing Empathy Against Stereotype Threats</em></div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2016</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>Eng., Computer Engineering</strong>, Sharif University of Technology, Tehran, Iran</div>
+      <div class="cv-entry__detail">Advisor: Alireza Ejlali</div>
+      <div class="cv-entry__detail">Thesis: <em>Data Allocation for SPM on Embedded Multi-Core Systems to Reduce WCET</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ Experience ================================ -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Research &amp; Professional Experience</h2>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2019 – 2026</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>Graduate Research Assistant</strong>, Natural User Interaction Lab (NUILab), Colorado State University</div>
+      <div class="cv-entry__detail cv-muted">Fort Collins, CO · Supervisor: <a href="{{ ortega }}">Prof. Francisco R. Ortega</a></div>
+      <ul class="cv-bullets">
+        <li>Led research projects on interaction modalities in XR end to end, from problem formulation and system development through evaluation and publication, resulting in 15 publications.</li>
+        <li>Designed and ran human-subject studies (N = 20–80+), including controlled experiments, surveys, and interviews; analyzed quantitative and qualitative data with statistical and thematic methods.</li>
+        <li>Developed immersive AR/VR research applications using Unity, MRTK, Vuforia, Blender, and Autodesk Maya.</li>
+        <li>Contributed to research funding through NSF reports and grant proposal writing.</li>
+        <li>Mentored undergraduate and master's students in research design, implementation, data analysis, and scientific writing.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2022</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>Augmented Reality Developer Intern</strong>, Digital Services and Solutions, Ricoh USA</div>
+      <div class="cv-entry__detail cv-muted">Exton, PA · May – Dec 2022 · Supervisor: Nicole Blohm</div>
+      <ul class="cv-bullets">
+        <li>Developed a proof-of-concept mobile AR application to improve workplace efficiency, built in Unity with Vuforia and integrated barcode scanning.</li>
+        <li>Designed and evaluated the application's user experience and functionality.</li>
+        <li>Researched the use of AR in insurance applications.</li>
+        <li>Internship extended through December 2022 on the basis of strong performance.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-entry__date">2012 – 2015</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><strong>Research Assistant</strong>, Embedded Systems Research Laboratory (ESR-Lab), Sharif University of Technology</div>
+      <div class="cv-entry__detail cv-muted">Tehran, Iran · Supervisor: Prof. Alireza Ejlali</div>
+      <ul class="cv-bullets">
+        <li>Researched embedded multi-core systems, including data allocation for scratchpad memory (SPM) to reduce worst-case execution time (WCET).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== Publications =============================== -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Publications</h2>
+  <p class="cv-note">Reverse chronological order. <strong>Bold</strong> marks my name. Full list on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+
+  <h3 class="cv-subtitle">Journal Articles</h3>
+  <ol class="cv-pubs">
+    <li data-label="J2"><strong>Borhani, Z.</strong>, Holen, E., Williams, A. S., Barrera Machuca, M. D., Batmaz, A. U., Kelley, B., Zhou, X., Rhodes, M. G., &amp; Ortega, F. R. (2026). Recall This Gesture? Investigating Gesture Memorability in Extended Reality. <em>IEEE Transactions on Visualization and Computer Graphics (TVCG)</em>, 32(7), 6215–6225. <a class="cv-link" href="https://ieeexplore.ieee.org/document/11457803">Paper</a></li>
+    <li data-label="J1"><strong>Borhani, Z.</strong>, Sharma, P., &amp; Ortega, F. R. (2024). Survey of Annotations in Extended Reality Systems. <em>IEEE Transactions on Visualization and Computer Graphics (TVCG)</em>, 30(8), 5074–5096. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/10160139">Paper</a></li>
+  </ol>
+
+  <h3 class="cv-subtitle">Peer-Reviewed Conference Papers</h3>
+  <ol class="cv-pubs">
+    <li data-label="C5"><strong>Borhani, Z.</strong>, Rodriguez, R., Barrera Machuca, M. D., Batmaz, A. U., &amp; Ortega, F. R. (2026). Creative Flow in VR Sketching: Comparing Unimodal and Multimodal Input Techniques in the Creative Process. <em>32nd ACM Symposium on Virtual Reality Software and Technology (VRST)</em>. To appear.</li>
+    <li data-label="C4">Rose, M., <strong>Borhani, Z.</strong>, Schreiber, D., Azuka-Onwuka, N., Barrera Machuca, M. D., &amp; Ortega, F. R. (2026). Eyes on the Street: An Outdoor Study of Pedestrian Navigation Support Using Augmented Reality Glasses. <em>32nd ACM Symposium on Virtual Reality Software and Technology (VRST)</em>. To appear.</li>
+    <li data-label="C3">Li, J., <strong>Borhani, Z.</strong>, Buckman, M., Williams, A. S., Guo, Y., Barrera Machuca, M. D., Danielescu, A., &amp; Ortega, F. R. (2026). Did I Do It Differently? Comparing Gesture Elicitation in Virtual and Augmented Reality. <em>25th IEEE International Symposium on Mixed and Augmented Reality (ISMAR)</em>.</li>
+    <li data-label="C2"><strong>Borhani, Z.</strong>, Delamarre, A., Plabst, L., Ferguson, L., Jenkins, R., Barreto, A., &amp; Ortega, F. R. (2025). Comparing Instruction Methods for DailyBuddy: A Mobile App for Improving Daily Living Skills for Adults with Autism. <em>27th International Conference on Human-Computer Interaction (HCII)</em>, LNCS 15823, 193–212. Springer. <a class="cv-link" href="https://link.springer.com/chapter/10.1007/978-3-031-93061-4_13">Paper</a></li>
+    <li data-label="C1">Li, J., Coler, A. S., <strong>Borhani, Z.</strong>, &amp; Ortega, F. R. (2024). Collecting and Analyzing the Mid-Air Gestures Data in Augmented Reality and User Preferences in Closed Elicitation Study. <em>26th International Conference on Human-Computer Interaction (HCII)</em>, 201–215. Springer. <a class="cv-link" href="https://link.springer.com/chapter/10.1007/978-3-031-61044-8_15">Paper</a></li>
+  </ol>
+
+  <h3 class="cv-subtitle">Workshop Papers, Posters, and Doctoral Consortium</h3>
+  <ol class="cv-pubs">
+    <li data-label="W8">Buckman, M. J., <strong>Borhani, Z.</strong>, McCoy, H., Dong, Y., Guo, Y., Atadero, R., Hausman, H., Rhodes, M. G., Moraes, M., &amp; Ortega, F. R. (2026). Does Virtual Reality Design Matter for Learning? A Study of Fluid Dynamics. <em>IEEE ISMAR Adjunct (TeacXR Workshop)</em>.</li>
+    <li data-label="W7">Raikwar, A., <strong>Borhani, Z.</strong>, Plabst, L., Batmaz, A. U., Barrera Machuca, M. D., Niebling, F., &amp; Ortega, F. R. (2026). Beyond the Beep: Comparing Visual-Only and Multimodal Notification Design for Improved Noticeability in AR. <em>IEEE ISMAR Adjunct (Alt'ISMAR Workshop)</em>.</li>
+    <li data-label="W6">Kroma, A., Scavarelli, A., <strong>Borhani, Z.</strong>, Grinyer, K., McArthur, V., Ortega, F. R., &amp; Teather, R. J. (2025). 3rd Workshop on Emerging Novel Prototyping Techniques for XR. <em>IEEE VR Abstracts and Workshops (VRW)</em>, 51–52. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/10972780">Paper</a></li>
+    <li data-label="W5">Ortega, F. R., Interrante, V., LoTemplio, S., Masters, R., Nicoly, J., <strong>Borhani, Z.</strong>, Davalos, D., &amp; Zielasko, D. (2024). Enhancing Well-Being Through Positive Technology: VR Forest Bathing. <em>PosiTech Workshop at ACM CSCW</em>. <a class="cv-link" href="https://arxiv.org/abs/2411.06293">Paper</a></li>
+    <li data-label="W4"><strong>Borhani, Z.</strong>, &amp; Ortega, F. R. (2024). Enhancing Replicability in XR HCI Studies: A Survey-Based Approach. <em>IEEE ISMAR Adjunct (WoRXR Workshop)</em>, 42–46. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/10765306">Paper</a></li>
+    <li data-label="W3"><strong>Borhani, Z.</strong>, Borhani, F., &amp; Ortega, F. R. (2024). Experiencing Gravitational Red-Shifting in Virtual Reality. <em>IEEE VR Abstracts and Workshops (VRW)</em>, 133–137. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/10536373">Paper</a></li>
+    <li data-label="W2"><strong>Borhani, Z.</strong>, &amp; Ortega, F. R. (2023). A Virtual Reality System for Gender Swapping to Increase Empathy Against Stereotype Threats in Computer Science Job Interviews. <em>IEEE ISMAR Adjunct</em>, 648–649. Poster. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/10322181">Paper</a></li>
+    <li data-label="W1"><strong>Borhani, Z.</strong> (2022). Annotation in Asynchronous Collaborative Immersive Analytic Environments Using Augmented Reality. <em>IEEE VR Abstracts and Workshops (VRW)</em>, 950–951. Doctoral Consortium. <a class="cv-link" href="https://ieeexplore.ieee.org/abstract/document/9757653">Paper</a></li>
+  </ol>
+
+  <h3 class="cv-subtitle">Thesis</h3>
+  <ol class="cv-pubs">
+    <li data-label="T1"><strong>Borhani, Z.</strong> (2020). <em>Using Gender Swap in Virtual Reality for Increasing Empathy Against Stereotype Threats.</em> Master's thesis, Colorado State University. Advisor: F. R. Ortega. <a class="cv-link" href="https://www.proquest.com/openview/c8eaf2dfeef269cae04c3ba5de35714d/1?pq-origsite=gscholar&amp;cbl=18750&amp;diss=y">Thesis</a></li>
+  </ol>
+</section>
+
+<!-- ================================= Teaching ================================= -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Teaching</h2>
+
+  <h3 class="cv-subtitle">Colorado State University</h3>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Fall 2026</div>
+    <div class="cv-entry__body"><strong>Co-Instructor</strong>, CS 567: 3D User Interfaces and Human-Centered Spatial AI</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Fall 2025</div>
+    <div class="cv-entry__body"><strong>Graduate Teaching Assistant</strong>, CS 462: Engaging in Virtual Worlds</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Summer 2025</div>
+    <div class="cv-entry__body"><strong>Graduate Teaching Assistant</strong>, CT 301: C++ Fundamentals</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Fall 2020</div>
+    <div class="cv-entry__body">CS/IDEA 310H: Design Thinking Toolbox: Mixed Reality Design</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2019 – 2020</div>
+    <div class="cv-entry__body"><strong>Graduate Teaching Assistant</strong>, CS 430: Database Systems <span class="cv-muted">(Summer 2019, Spring 2020, Summer 2020)</span></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2018 – 2019</div>
+    <div class="cv-entry__body"><strong>Lead Teaching Assistant</strong>, CS 270: Computer Organization <span class="cv-muted">(Spring 2018 – Spring 2019)</span></div>
+  </div>
+
+  <h3 class="cv-subtitle">Sharif University of Technology</h3>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Spring 2014</div>
+    <div class="cv-entry__body"><strong>Graduate Teaching Assistant</strong>, Operations Management (MBA)</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Fall 2013</div>
+    <div class="cv-entry__body"><strong>Lab Instructor</strong>, CS 212: Logic Design</div>
+  </div>
+</section>
+
+<!-- ============================== Honors & Awards ============================= -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Honors &amp; Awards</h2>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2024</div>
+    <div class="cv-entry__body"><strong>3rd Place (Graduate)</strong>, ACM Student Research Competition, Tapia Conference <a class="cv-link" href="https://compsci.colostate.edu/graduate-students/">News</a> <a class="cv-link" href="https://drive.google.com/file/d/1V8dl7_RWi4o6IviwxIdgFO4mcx6MTF3g">Certificate</a></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2020</div>
+    <div class="cv-entry__body"><strong>Computer Science Excellence in Diversity Award</strong>, Colorado State University <a class="cv-link" href="https://drive.google.com/file/d/1s1-JKsg8aULmNwxHdVV-927j7lNl8H2O/view?usp=sharing">Certificate</a></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2019</div>
+    <div class="cv-entry__body"><strong>1st Place</strong>, CSU XR Hackathon, Fort Collins <a class="cv-link" href="https://collegian.com/articles/news/2019/10/category-news-vr-meets-science-hackathon-births-vr-innovation/">News</a></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2012</div>
+    <div class="cv-entry__body"><strong>Ranked 35th among 20,000+ participants</strong>, National M.Sc. Entrance Exam in Computer Architecture, Iran</div>
+  </div>
+</section>
+
+<!-- ========================= Scholarships & Fellowships ======================== -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Scholarships &amp; Fellowships</h2>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2020 – 2025</div>
+    <div class="cv-entry__body"><strong>ACM Richard Tapia Conference Travel Scholarship</strong> <span class="cv-muted">(2025, 2024, 2022, 2021, 2020)</span></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2021</div>
+    <div class="cv-entry__body"><strong>Grace Hopper Celebration Student Travel Scholarship</strong></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2021</div>
+    <div class="cv-entry__body"><strong>Inclusion, Diversity, Equity and Accessibility (IDEA) Travel Scholarship</strong></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2012 – 2015</div>
+    <div class="cv-entry__body"><strong>Fellowship for M.S. Study</strong>, Sharif University of Technology</div>
+  </div>
+</section>
+
+<!-- =========================== Talks & Presentations =========================== -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Talks &amp; Presentations</h2>
+
+  <h3 class="cv-subtitle">Invited Talks</h3>
+  <div class="cv-entry">
+    <div class="cv-entry__date"></div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>How to Conduct a Systematic Literature Review in Extended Reality</em></div>
+      <div class="cv-entry__detail cv-muted">Guest lecture, Dalhousie University (remote)</div>
+    </div>
+  </div>
+
+  <h3 class="cv-subtitle">Conference Presentations</h3>
+  <div class="cv-entry">
+    <div class="cv-entry__date">Jun 2025</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>Comparing Instruction Methods for DailyBuddy: A Mobile App for Improving Daily Living Skills for Adults with Autism</em></div>
+      <div class="cv-entry__detail cv-muted">Paper presentation, HCII 2025, Gothenburg, Sweden (remote)</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">Oct 2024</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>Survey of Annotations in Extended Reality Systems</em></div>
+      <div class="cv-entry__detail cv-muted">TVCG journal presentation, IEEE ISMAR 2024, Seattle, WA</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">Oct 2024</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>Enhancing Replicability in XR HCI Studies: A Survey-Based Approach</em></div>
+      <div class="cv-entry__detail cv-muted">Workshop paper, 3rd Workshop on Replication in Extended Reality (WoRXR), ISMAR 2024, Seattle, WA</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">Sep 2024</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>A Mobile App for Improving Daily Living Skills for Adults with Autism</em></div>
+      <div class="cv-entry__detail cv-muted">Poster, Tapia Conference 2024, San Diego, CA</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">Mar 2024</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>Experiencing Gravitational Red-Shifting in Virtual Reality</em></div>
+      <div class="cv-entry__detail cv-muted">Workshop paper, IEEE VR 2024, Orlando, FL</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">2023</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>A Virtual Reality System for Gender Swapping to Increase Empathy Against Stereotype Threats in Computer Science Job Interviews</em></div>
+      <div class="cv-entry__detail cv-muted">Poster, IEEE ISMAR 2023</div>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-entry__date">2022</div>
+    <div class="cv-entry__body">
+      <div class="cv-entry__head"><em>Annotation in Asynchronous Collaborative Immersive Analytic Environments Using Augmented Reality</em></div>
+      <div class="cv-entry__detail cv-muted">Doctoral Consortium, IEEE VR 2022 (remote)</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== Professional Service ============================ -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Professional Service</h2>
+
+  <h3 class="cv-subtitle">Conference and Workshop Organization</h3>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2025 – 2026</div>
+    <div class="cv-entry__body"><strong>Registration Co-Chair</strong>, ACM SUI 2026, <a href="https://sui.acm.org/2025/committee-members/">ACM SUI 2025</a>, <a href="https://vrst.acm.org/vrst2025/index.php/committee/">ACM VRST 2025</a></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2023 – 2025</div>
+    <div class="cv-entry__body"><strong>Organizing Committee</strong>, <a href="https://www.xrprototyping.com/">Workshop on Emerging Novel Prototyping Techniques for XR (ENPTXR)</a> at IEEE VR 2025, 2024, and 2023</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2021</div>
+    <div class="cv-entry__body"><strong>Organizing Committee</strong>, <a href="https://sui.acm.org/2021-testing/">ACM SUI 2021</a></div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2021</div>
+    <div class="cv-entry__body"><strong>Organizing Committee</strong>, <a href="https://sites.google.com/view/disce">Workshop on Distributed Interactive Systems for Collaboration Experiences (DISCE)</a> at IEEE VR 2021</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">2019</div>
+    <div class="cv-entry__body"><strong>Organizing Committee</strong>, Graduate Poster Session, Department of Computer Science, CSU</div>
+  </div>
+
+  <h3 class="cv-subtitle">Reviewing <span class="cv-muted cv-subtitle__aside">33 submissions; number per venue in parentheses</span></h3>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Journals</div>
+    <div class="cv-entry__body">IEEE TVCG 2026 (2), 2025 (3); Frontiers 2022 (2)</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">ACM CHI</div>
+    <div class="cv-entry__body">2027 (1), 2026 (5), 2025 (3); Late-Breaking Work 2021 (1)</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">IEEE ISMAR</div>
+    <div class="cv-entry__body">2025 (3), 2024 (2), 2023 (1), 2022 (1), 2021 (2)</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Other</div>
+    <div class="cv-entry__body">IEEE VR 2024 (1), 2021 (1); ACM SUI 2023 (2); Graphics Interface 2024 (2); ACM ISS 2022 (1)</div>
+  </div>
+</section>
+
+<!-- ================================== Skills ================================== -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Technical Skills</h2>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">XR development</div>
+    <div class="cv-entry__body">Unity, Unreal Engine (Blueprints), Mixed Reality Toolkit (MRTK), OpenXR, Vuforia, SteamVR</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Programming</div>
+    <div class="cv-entry__body">C#, Python, R, SQL, C++, C</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Research methods</div>
+    <div class="cv-entry__body">Controlled experiments, surveys, interviews; statistical and thematic analysis</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Design &amp; 3D</div>
+    <div class="cv-entry__body">Figma, Blender, Autodesk Maya, Adobe Fuse, Character Creator 3</div>
+  </div>
+  <div class="cv-entry cv-entry--compact">
+    <div class="cv-entry__date">Devices</div>
+    <div class="cv-entry__body">HoloLens 2, HTC Vive, Vive Trackers, Oculus Quest / Rift, Logitech VR Ink, Holo-Stylus, Leap Motion, Kinect</div>
+  </div>
+</section>
+
+<!-- ============================ Conferences Attended ========================== -->
+<section class="cv-section">
+  <h2 class="cv-section__title">Conferences Attended</h2>
+  <p class="cv-lead">HCI International 2025; IEEE ISMAR 2024; IEEE VR 2024; Tapia 2024; RMACC 2023; Tapia 2022; IEEE VR 2022; RMACC 2022; Tapia 2021; Grace Hopper Celebration 2021; Tapia 2019.</p>
+</section>
+
+</div>
+
+<style>
+/* ---------- CV page: classic academic layout ---------- */
+.cv { font-size: .95em; line-height: 1.55; color: #2b2f33; }
+.cv-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem; margin: -.5rem 0 1.5rem; }
+.cv-updated { margin: 0; font-size: .82em; color: #8a95a0; font-style: italic; }
+.cv-download {
+  display: inline-block; padding: .35em 1em; border-radius: 6px;
+  background: var(--accent, #1f4e79); color: #fff !important;
+  font-size: .85em; font-weight: 600; text-decoration: none !important;
+}
+.cv-download:hover, .cv-download:focus { background: var(--accent-dark, #163a5a); }
+@media print { .cv-download { display: none; } }
+.cv-muted { color: #6b737b; }
+
+.cv-section { margin: 0 0 2.2rem; }
+.cv-section__title {
+  font-family: var(--font-head, Georgia, serif);
+  font-variant: small-caps; letter-spacing: .04em;
+  font-size: 1.3em; font-weight: 700; color: var(--accent, #1f4e79);
+  margin: 0 0 .9rem; padding: 0 0 .3rem;
+  border-bottom: 1.5px solid var(--accent, #1f4e79);
+}
+.cv-subtitle {
+  font-family: var(--font-body, sans-serif);
+  font-size: .82em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: #4a525a; margin: 1.3rem 0 .6rem;
+}
+.cv-subtitle__aside { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 1.05em; margin-left: .4em; }
+.cv-lead, .cv-note { margin: 0 0 .5rem; }
+.cv-note { font-size: .88em; color: #6b737b; }
+
+/* Date column on the left, content on the right */
+.cv-entry {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1.1rem;
+  margin: 0 0 1rem;
+}
+.cv-entry--compact { margin-bottom: .45rem; }
+.cv-entry__date {
+  text-align: right; font-size: .9em; color: #4a525a;
+  font-variant-numeric: tabular-nums; white-space: normal;
+}
+.cv-entry__head { margin-bottom: .1rem; }
+.cv-entry__detail { font-size: .93em; }
+.cv-bullets { margin: .35rem 0 0; padding-left: 1.1rem; font-size: .93em; }
+.cv-bullets li { margin: 0 0 .2rem; }
+
+/* Numbered publication list: J1, C1, W1 ... in the left margin */
+.cv-pubs { list-style: none; margin: 0; padding: 0; }
+.cv-pubs li {
+  position: relative; margin: 0 0 .8rem; padding-left: 3rem;
+  font-size: .93em;
+}
+.cv-pubs li::before {
+  content: "[" attr(data-label) "]";
+  position: absolute; left: 0; top: 0; width: 2.5rem;
+  font-weight: 700; color: var(--accent, #1f4e79); font-variant-numeric: tabular-nums;
+}
+.cv-pubs li strong { color: #1c2228; }
+
+/* Small outlined link badges: Paper, News, Certificate */
+.cv-link {
+  display: inline-block; margin-left: .25em; padding: 0 .45em;
+  font-size: .78em; font-weight: 600; line-height: 1.6;
+  border: 1px solid var(--accent, #1f4e79); border-radius: 4px;
+  color: var(--accent, #1f4e79) !important; text-decoration: none !important;
+  vertical-align: .08em;
+}
+.cv-link:hover, .cv-link:focus { background: var(--accent, #1f4e79); color: #fff !important; }
+
+/* Phones: stack the date above the content */
+@media (max-width: 600px) {
+  .cv-entry { grid-template-columns: 1fr; gap: .1rem; }
+  .cv-entry__date { text-align: left; font-weight: 600; }
+  .cv-entry__date:empty { display: none; }
+}
+
+/* Printing the page gives a clean paper CV */
+@media print {
+  .cv-link { border: 0; padding: 0; }
+  .cv-section { break-inside: avoid-page; }
+}
+</style>
