@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Zahra Faezeh Borhani"
+title                    : "Zahra Borhani"
 title_separator          : "-"
-name                     : &name "Zahra Faezeh Borhani"
+name                     : &name "Zahra Borhani"
 description              : &description "PhD Candidate @  Colorado State University"
 url                      : https://faezehborhani.github.io/ # the base hostname & protocol for your site e.g. "https://faezehborhani.github.io/"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +22,7 @@ repository               : "https://faezehborhani.github.io/"
 author:
   # Biographic information
   avatar           : "ZahraBorhaniHeadShotTapia.png"
-  name             : "Zahra Faezeh Borhani"
+  name             : "Zahra Borhani"
   pronouns         : # example: "she/her"  
   bio              : "Researcher in Augmented/Virtual Reality"
   location         : "San Jose, CA, USA"
